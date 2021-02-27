@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41A6E5DD25EAC8F50090CBE8 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E5DC25EAC8F50090CBE8 /* Habit.swift */; };
+		41A6E5E125EACB640090CBE8 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E5E025EACB640090CBE8 /* DateExtensions.swift */; };
 		41FF929125E9C18B008B3AF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FF929025E9C18B008B3AF7 /* AppDelegate.swift */; };
 		41FF929325E9C18B008B3AF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FF929225E9C18B008B3AF7 /* SceneDelegate.swift */; };
 		41FF929A25E9C18D008B3AF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41FF929925E9C18D008B3AF7 /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41A6E5DC25EAC8F50090CBE8 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		41A6E5E025EACB640090CBE8 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		41FF928D25E9C18B008B3AF7 /* HabitsRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitsRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FF929025E9C18B008B3AF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41FF929225E9C18B008B3AF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41A6E5DB25EAC8DF0090CBE8 /* Habit */ = {
+			isa = PBXGroup;
+			children = (
+				41A6E5DC25EAC8F50090CBE8 /* Habit.swift */,
+				41A6E5E025EACB640090CBE8 /* DateExtensions.swift */,
+			);
+			path = Habit;
+			sourceTree = "<group>";
+		};
 		41FF928425E9C18B008B3AF7 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +86,7 @@
 		41FF92AC25E9C95B008B3AF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41A6E5DB25EAC8DF0090CBE8 /* Habit */,
 				41FF92A725E9C94F008B3AF7 /* HabitsTableViewController.swift */,
 				41FF92A825E9C94F008B3AF7 /* HabitsTableViewController.xib */,
 			);
@@ -150,9 +164,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				41FF92B025E9CA44008B3AF7 /* UIViewControllerExtensions.swift in Sources */,
+				41A6E5DD25EAC8F50090CBE8 /* Habit.swift in Sources */,
 				41FF929125E9C18B008B3AF7 /* AppDelegate.swift in Sources */,
 				41FF929325E9C18B008B3AF7 /* SceneDelegate.swift in Sources */,
 				41FF92A925E9C94F008B3AF7 /* HabitsTableViewController.swift in Sources */,
+				41A6E5E125EACB640090CBE8 /* DateExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
