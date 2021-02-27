@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let mainController = UIViewController()
         mainController.view.backgroundColor = .blue
         
-        // Tell the window to load the main controller as it's root view
+        // Tell the window to load the main controller as it's root View
         window?.rootViewController = mainController
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
