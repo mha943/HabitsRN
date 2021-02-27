@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else{return}
         window = UIWindow(frame: UIScreen.main.bounds)
         // Create an instance of the main view controller
-        let mainViewController = MainViewController.instaniate()
+        let mainViewController = HabitsTableViewController.instaniate()
         let navigationController = UINavigationController(rootViewController: mainViewController)
         
         // Tell the window to load the main controller as it's root View
