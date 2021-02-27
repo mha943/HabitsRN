@@ -13,7 +13,7 @@ class HabitsTableViewController: UITableViewController {
     //test habits
     var habits: [Habit] = [
         Habit(title: "go to bed before 10pm", image: Habit.Images.book),
-        Habit(title: "exercise period",image: Habit.Images.book),
+        Habit(title: "exercise period, cuz i don't want to get fat",image: Habit.Images.book),
         Habit(title: "work on capstone project", image: Habit.Images.book),
     ]
     
@@ -25,14 +25,9 @@ class HabitsTableViewController: UITableViewController {
     
     // Return the UITableViewCell for the given indexPath
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        var cell: UITableViewCell
-        if let dequeueCell = tableView.dequeueReusableCell(withIdentifier: "cell"){
-            cell = dequeueCell
-        } else {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        }
+        let cell = tableView.dequeueReusableCell( withIdentifier: HabitTableViewCell.identifier,for: indexPath) as! HabitTableViewCell
         let habit = habits[indexPath.row]
-        cell.textLabel?.text = habit.title
+        cell.configure(habit)
         return cell
     }
 
@@ -42,6 +37,8 @@ class HabitsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
+        tableView.register(
+            HabitTableViewCell.nib, forCellReuseIdentifier: HabitTableViewCell.identifier)
         // Do any additional setup after loading the view.
     }
     
