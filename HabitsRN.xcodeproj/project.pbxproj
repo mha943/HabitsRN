@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41857D0825F27C1200477F8F /* PersistenceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41857D0725F27C1200477F8F /* PersistenceLayer.swift */; };
 		41A6E5DD25EAC8F50090CBE8 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E5DC25EAC8F50090CBE8 /* Habit.swift */; };
 		41A6E5E125EACB640090CBE8 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E5E025EACB640090CBE8 /* DateExtensions.swift */; };
 		41A6E5E625EAD2280090CBE8 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E5E425EAD2280090CBE8 /* HabitTableViewCell.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41857D0725F27C1200477F8F /* PersistenceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceLayer.swift; sourceTree = "<group>"; };
 		41A6E5DC25EAC8F50090CBE8 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		41A6E5E025EACB640090CBE8 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		41A6E5E425EAD2280090CBE8 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				41A6E5E325EAD1E90090CBE8 /* MainScreen */,
 				41A6E5DB25EAC8DF0090CBE8 /* Habit */,
+				41857D0725F27C1200477F8F /* PersistenceLayer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				41FF92B025E9CA44008B3AF7 /* UIViewControllerExtensions.swift in Sources */,
 				41A6E5DD25EAC8F50090CBE8 /* Habit.swift in Sources */,
 				41FF929125E9C18B008B3AF7 /* AppDelegate.swift in Sources */,
+				41857D0825F27C1200477F8F /* PersistenceLayer.swift in Sources */,
 				41FF929325E9C18B008B3AF7 /* SceneDelegate.swift in Sources */,
 				41FF92A925E9C94F008B3AF7 /* HabitsTableViewController.swift in Sources */,
 				41A6E5E625EAD2280090CBE8 /* HabitTableViewCell.swift in Sources */,
