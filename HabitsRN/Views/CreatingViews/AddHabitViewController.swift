@@ -35,6 +35,10 @@ class AddHabitViewController: UIViewController {
     }
     
     @IBAction func pickPhotoButtonPressed(_ sender: Any) {
+        guard let selectedIndexPath = selectedIndexPath else{return}
+        let confirmHabitVC = ConfirmHabitViewController.instaniate()
+        confirmHabitVC.habitImage = habitImages[selectedIndexPath.row]
+        navigationController?.pushViewController(confirmHabitVC, animated: true)
     }
     
     // sets up the Navigation bar to go back
