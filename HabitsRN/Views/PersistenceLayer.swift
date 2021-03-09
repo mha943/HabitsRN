@@ -29,22 +29,22 @@ struct PersistenceLayer{
         guard
             let habitData = userDefaults.data(forKey: PersistenceLayer.userDefaultHabitsKeyValue),
             let habits = try? JSONDecoder().decode([Habit].self, from: habitData) else{
-                return
+            return
         }
         self.habits = habits
     }
     
     
     @discardableResult
-        // function to add habit and preappend it to the begining of Habit array
-        mutating func addHabit(name: String, image: Habit.Images) -> Habit{
+    // function to add habit and preappend it to the begining of Habit array
+    mutating func addHabit(name: String, image: Habit.Images) -> Habit{
         
-            let newHabit = Habit(title: name, image: image)
-            self.habits.insert(newHabit, at: 0)
-            self.saveHabits()
+        let newHabit = Habit(title: name, image: image)
+        self.habits.insert(newHabit, at: 0)
+        self.saveHabits()
         
-            return newHabit
-        }
+        return newHabit
+    }
     
     private func saveHabits(){
         // encode the habit into the userDefault database
@@ -58,6 +58,7 @@ struct PersistenceLayer{
     }
     
     mutating func delete(_ habitIndex: Int){
+        // remove the habit from the indicated index
         self.habits.remove(at: habitIndex)
         self.saveHabits()
     }
@@ -70,16 +71,16 @@ struct PersistenceLayer{
         
         // set up streak variable for the habit
         if let lastCompletionDate = updatedHabit.lastCompletionDate, lastCompletionDate.isYesterday {
-                updatedHabit.currentStreak += 1
+            updatedHabit.currentStreak += 1
         }else{
-                updatedHabit.currentStreak = 1
-            }
+            updatedHabit.currentStreak = 1
+        }
         
         // if the current streak is better than best then set best
         if updatedHabit.currentStreak > updatedHabit.bestStreak {
             updatedHabit.bestStreak = updatedHabit.currentStreak
         }
-    
+        
         // sets last completion to today
         let now = Date()
         updatedHabit.lastCompletionDate = now

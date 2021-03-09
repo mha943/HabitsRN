@@ -56,14 +56,18 @@ extension HabitsTableViewController {
     //adds a title, add button to the main view
     func setupNavBar(){
         title = "HabitsRN"
-//        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(pressAddHabit(_:)))
-       // navigationItem.rightBarButtonItem = addButton
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(pressAddHabit(_:)))
+        navigationItem.rightBarButtonItem = addButton
     }
     
-    //when the add button pressed then inserts a new row
-//    @objc func pressAddHabit(_ sender: UIBarButtonItem){
-//        names.insert("Hello, World!", at: 0)
-//        let topIndexPath = IndexPath(row:0, section: 0)
-//        tableView.insertRows(at: [topIndexPath], with: .automatic)
-//    }
+    //when the add button pressed it opens new view
+    @objc func pressAddHabit(_ sender: UIBarButtonItem){
+        // creates add habit view
+        let addHabitVC = AddHabitViewController.instaniate()
+        // creates a navigation controller
+        let navigationController = UINavigationController(rootViewController: addHabitVC)
+        // format the controller
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true, completion: nil)
+    }
 }

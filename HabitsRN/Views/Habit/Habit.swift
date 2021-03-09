@@ -9,7 +9,7 @@
 import UIKit
 
 struct Habit : Codable{
-
+    
     enum Images: Int,Codable, CaseIterable {
         case book
         case bulb
@@ -22,12 +22,11 @@ struct Habit : Codable{
         case heart
         case lotus
         case other
-        case pet
         case pill
         case search
         case sleep
         case tooth
-
+        
         var image: UIImage {
             guard let image = UIImage(named: String(describing: self)) else {
                 fatalError("image \(self) not found")
