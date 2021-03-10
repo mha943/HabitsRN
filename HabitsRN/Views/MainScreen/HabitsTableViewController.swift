@@ -9,13 +9,13 @@ import UIKit
 
 class HabitsTableViewController: UITableViewController {
     //test array
-//    var names: [String] = ["Alan", "Braus", "Max", "Libby", "Matthew"]
-//    //test habits
-//    var habits: [Habit] = [
-//        Habit(title: "go to bed before 10pm", image: Habit.Images.book),
-//        Habit(title: "exercise period, cuz i don't want to get fat",image: Habit.Images.book),
-//        Habit(title: "work on capstone project", image: Habit.Images.book),
-//    ]
+    //    var names: [String] = ["Alan", "Braus", "Max", "Libby", "Matthew"]
+    //    //test habits
+    //    var habits: [Habit] = [
+    //        Habit(title: "go to bed before 10pm", image: Habit.Images.book),
+    //        Habit(title: "exercise period, cuz i don't want to get fat",image: Habit.Images.book),
+    //        Habit(title: "work on capstone project", image: Habit.Images.book),
+    //    ]
     
     private var persistence = PersistenceLayer()
     
@@ -32,7 +32,7 @@ class HabitsTableViewController: UITableViewController {
         cell.configure(habit)
         return cell
     }
-
+    
     // Calls the reload function from the persistence layer and reloads the table with it
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -59,6 +59,27 @@ class HabitsTableViewController: UITableViewController {
         navigationController?.pushViewController(habitDetailVC, animated: true)
     }
     
+    // method to delete habit entries
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        switch editingStyle {
+        case .delete:
+            let habitToDelete = persistence.habits[indexPath.row]
+            let habitIndextoDelete = indexPath.row
+            
+            let deleteAlert = UIAlertController(habitTitle: habitToDelete.title){
+                self.persistence.delete(habitIndextoDelete)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+            self.present(deleteAlert, animated: true)
+        default:
+            break
+        }
+    }
+    
+    // method used to call swap of habits
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath){
+        persistence.swapHabits(habitIndex: sourceIndexPath.row, destinationIndex: destinationIndexPath.row)
+    }
 }
 
 extension HabitsTableViewController {
@@ -67,6 +88,7 @@ extension HabitsTableViewController {
         title = "HabitsRN"
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(pressAddHabit(_:)))
         navigationItem.rightBarButtonItem = addButton
+        navigationItem.leftBarButtonItem = self.editButtonItem
     }
     
     //when the add button pressed it opens new view
@@ -78,5 +100,20 @@ extension HabitsTableViewController {
         // format the controller
         navigationController.modalPresentationStyle = .fullScreen
         present(navigationController, animated: true, completion: nil)
+    }
+    
+}
+
+extension UIAlertController {
+    convenience init (habitTitle: String, confirmHandler: @escaping () -> Void){
+        self.init(title: "Delete Habit", message:"Are you sure you want to delete \(habitTitle)?", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title:"Confirm", style: .destructive){
+            _ in confirmHandler()
+        }
+        self.addAction(confirmAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        self.addAction(cancelAction)
+        
     }
 }

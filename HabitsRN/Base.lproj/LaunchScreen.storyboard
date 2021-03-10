@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading HabitsRN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzJ-MA-fXt">
-                                <rect key="frame" x="67" y="427" width="280" height="43"/>
+                                <rect key="frame" x="67" y="426.5" width="280" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,10 +26,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qzJ-MA-fXt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="383" id="HSE-f5-ge0"/>
-                            <constraint firstItem="qzJ-MA-fXt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="NbL-z5-Cb5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qzJ-MA-fXt" secondAttribute="trailing" constant="67" id="PV7-gh-5Ra"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qzJ-MA-fXt" secondAttribute="bottom" constant="392" id="bVf-cY-IgE"/>
+                            <constraint firstItem="qzJ-MA-fXt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="PmN-uy-EZR"/>
+                            <constraint firstItem="qzJ-MA-fXt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vgF-0x-vEo"/>
                         </constraints>
                     </view>
                 </viewController>

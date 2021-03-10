@@ -52,10 +52,14 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="McE-am-Xc5" secondAttribute="trailing" constant="15" id="5CL-CG-8MC"/>
+                <constraint firstItem="c5D-g2-2AQ" firstAttribute="top" secondItem="McE-am-Xc5" secondAttribute="bottom" constant="15" id="8bX-AC-ZIP"/>
+                <constraint firstItem="McE-am-Xc5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="AFx-Lr-yh7"/>
                 <constraint firstItem="c5D-g2-2AQ" firstAttribute="top" secondItem="McE-am-Xc5" secondAttribute="bottom" constant="15" id="Ium-z7-pv4"/>
                 <constraint firstItem="c5D-g2-2AQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="LUh-hx-9Eh"/>
                 <constraint firstItem="McE-am-Xc5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="YA3-c0-g86"/>
                 <constraint firstItem="c5D-g2-2AQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dxK-8F-xqe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="McE-am-Xc5" secondAttribute="trailing" constant="15" id="gmH-hH-wlS"/>
+                <constraint firstItem="McE-am-Xc5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="l6g-lt-vI2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="c5D-g2-2AQ" secondAttribute="bottom" constant="20" id="laO-rL-6rD"/>
                 <constraint firstItem="McE-am-Xc5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="o2e-Mx-7Rg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="c5D-g2-2AQ" secondAttribute="trailing" constant="15" id="uHx-TF-G3K"/>

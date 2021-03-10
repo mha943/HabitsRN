@@ -93,6 +93,7 @@ struct PersistenceLayer{
         return updatedHabit
     }
     
+    // given a idex and destination index the destination
     mutating func swapHabits(habitIndex: Int, destinationIndex: Int){
         let habitToSwap = self.habits[habitIndex]
         self.habits.remove(at: habitIndex)
