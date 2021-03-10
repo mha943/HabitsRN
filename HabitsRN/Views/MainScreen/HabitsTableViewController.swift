@@ -25,6 +25,7 @@ class HabitsTableViewController: UITableViewController {
         
     }
     
+    
     // Return the UITableViewCell for the given indexPath
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell( withIdentifier: HabitTableViewCell.identifier,for: indexPath) as! HabitTableViewCell
@@ -80,6 +81,14 @@ class HabitsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath){
         persistence.swapHabits(habitIndex: sourceIndexPath.row, destinationIndex: destinationIndexPath.row)
     }
+    
+    @IBAction func suggestionButtonPressed(_ sender: Any) {
+        let suggestionVC = SuggestionViewController.instaniate()
+        
+        navigationController?.pushViewController(suggestionVC, animated: true)
+    }
+    
+
 }
 
 extension HabitsTableViewController {

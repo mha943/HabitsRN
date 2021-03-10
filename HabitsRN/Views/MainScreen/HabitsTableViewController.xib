@@ -17,6 +17,19 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="92z-9I-YmB">
+                <rect key="frame" x="0.0" y="828" width="414" height="60"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <color key="backgroundColor" red="0.052609611100000002" green="0.60869582980000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="50"/>
+                <state key="normal" title="Suggestions">
+                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                </state>
+                <connections>
+                    <action selector="suggestionButtonPressed:" destination="-1" eventType="touchUpInside" id="cub-16-F4z"/>
+                </connections>
+            </button>
             <connections>
                 <outlet property="dataSource" destination="-1" id="eOU-h4-hzp"/>
                 <outlet property="delegate" destination="-1" id="xUU-7d-nCR"/>
