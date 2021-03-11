@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SleepViewController" customModule="HabitsRN" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Fuq-J2-ybm">
+                    <rect key="frame" x="0.0" y="59" width="414" height="787"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ljt-wG-ywA">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="657"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TKn-s3-iM2">
+                                    <rect key="frame" x="20" y="0.0" width="372.5" height="834.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVL-02-EzQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="372.5" height="834.5"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Lorem ipsum dolor          ">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" metaFont="system" size="36"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content"> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Morbi non arcu risus quis varius quam quisque. Vel eros donec ac odio tempor orci dapibus ultrices in. Aliquet enim tortor at auctor urna. Lacus luctus accumsan tortor posuere ac ut consequat semper. Felis imperdiet proin fermentum leo vel orci. Cras fermentum odio eu feugiat. Aenean sed adipiscing diam donec adipiscing tristique risus. Ac odio tempor orci dapibus. Pharetra convallis posuere morbi leo urna molestie at elementum. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. A arcu cursus vitae congue mauris rhoncus aenean. Nam at lectus urna duis convallis convallis tellus id. Augue interdum velit euismod in pellentesque massa placerat duis. Aliquet bibendum enim facilisis gravida.
+
+Tristique nulla aliquet enim tortor at auctor. Eu mi bibendum neque egestas congue quisque egestas diam in. Maecenas sed enim ut sem. Mi in nulla posuere sollicitudin aliquam ultrices sagittis. Consectetur lorem donec massa sapien faucibus et molestie. Imperdiet dui accumsan sit amet nulla facilisi morbi. Lorem ipsum dolor sit amet consectetur. Lacinia quis vel eros donec ac odio tempor orci dapibus. Fermentum odio eu feugiat pretium nibh. Sodales ut eu sem integer vitae justo eget magna. Mattis molestie a iaculis at erat. Netus et malesuada fames ac. Dignissim sodales ut eu sem. Vulputate enim nulla aliquet porttitor lacus. Lacus viverra vitae congue eu consequat ac felis donec et. Tincidunt vitae semper quis lectus.phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Semper risus in hendrerit gravida. Ridiculus mus mauris vitae ultricies.</string>
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" metaFont="system" size="17"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="TKn-s3-iM2" firstAttribute="leading" secondItem="Uj9-Sg-cRX" secondAttribute="leading" constant="20" id="O0p-O7-7Qn"/>
+                                <constraint firstItem="TKn-s3-iM2" firstAttribute="trailing" secondItem="Uj9-Sg-cRX" secondAttribute="trailing" id="WBl-KE-vqb"/>
+                                <constraint firstItem="TKn-s3-iM2" firstAttribute="width" secondItem="Jch-V9-dFI" secondAttribute="width" multiplier="0.9" id="eht-dp-yCc"/>
+                                <constraint firstItem="TKn-s3-iM2" firstAttribute="top" secondItem="Uj9-Sg-cRX" secondAttribute="top" id="hX6-8v-gpg"/>
+                                <constraint firstItem="TKn-s3-iM2" firstAttribute="bottom" secondItem="Uj9-Sg-cRX" secondAttribute="bottom" id="k2I-8d-rGc"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="Uj9-Sg-cRX"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="Jch-V9-dFI"/>
+                        </scrollView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55K-ke-rXn">
+                            <rect key="frame" x="0.0" y="687" width="414" height="100"/>
+                            <color key="backgroundColor" red="0.052609611100000002" green="0.60869582980000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="uts-PA-476"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
+                            <state key="normal" title="Calculated Recommended Sleep">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="recomendSleepButtonPressed:" destination="-1" eventType="touchUpInside" id="PqB-kR-YC6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ljt-wG-ywA" firstAttribute="leading" secondItem="Fuq-J2-ybm" secondAttribute="leading" id="KwR-91-cSR"/>
+                        <constraint firstAttribute="trailing" secondItem="ljt-wG-ywA" secondAttribute="trailing" id="N8Y-x8-8dY"/>
+                        <constraint firstItem="55K-ke-rXn" firstAttribute="top" secondItem="ljt-wG-ywA" secondAttribute="bottom" constant="30" id="aoH-c8-VBh"/>
+                        <constraint firstItem="ljt-wG-ywA" firstAttribute="leading" secondItem="Fuq-J2-ybm" secondAttribute="leading" id="dNv-fv-CpA"/>
+                        <constraint firstAttribute="trailing" secondItem="ljt-wG-ywA" secondAttribute="trailing" id="ejQ-hG-4gF"/>
+                        <constraint firstItem="ljt-wG-ywA" firstAttribute="top" secondItem="Fuq-J2-ybm" secondAttribute="top" id="hWr-ua-e5g"/>
+                        <constraint firstItem="ljt-wG-ywA" firstAttribute="top" secondItem="Fuq-J2-ybm" secondAttribute="top" id="nZc-2R-WgR"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Fuq-J2-ybm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7vK-i0-vru"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fuq-J2-ybm" secondAttribute="trailing" id="YaB-sH-bIp"/>
+                <constraint firstAttribute="bottom" secondItem="Fuq-J2-ybm" secondAttribute="bottom" constant="50" id="db3-QQ-3yg"/>
+                <constraint firstItem="Fuq-J2-ybm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="gUa-bt-zRP"/>
+            </constraints>
+            <point key="canvasLocation" x="-33.333333333333336" y="87.723214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
