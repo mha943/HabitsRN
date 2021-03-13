@@ -11,6 +11,7 @@ class ConfirmHabitViewController: UIViewController {
     @IBOutlet weak var habitImageView: UIImageView!
     @IBOutlet weak var habitNameInputField: UITextField!
     
+    @IBOutlet weak var createHabitButton: UIButton!
     
     var habitImage: Habit.Images!
     
@@ -41,5 +42,36 @@ class ConfirmHabitViewController: UIViewController {
         }
     }
     
+    // From https://www.codingexplorer.com/how-to-dismiss-uitextfields-keyboard-in-your-swift-app/
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
+    }
+    
+    
+    
+    // Adapted from https://medium.com/@PaulWall43/how-to-raise-a-uitextfield-when-the-keyboard-shows-ccfa6553c911
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // adds observers to notificationCenter
+        NotificationCenter.default.addObserver(self, selector: #selector(ConfirmHabitViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ConfirmHabitViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else {return}
+        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else{return}
+        let keyboardFrame = keyboardSize.cgRectValue
+        if self.view.frame.origin.y == 0{
+            self.view.frame.origin.y -= (keyboardFrame.height)/1.25
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0{
+            self.view.frame.origin.y = 0
+        }
+    }
 
 }

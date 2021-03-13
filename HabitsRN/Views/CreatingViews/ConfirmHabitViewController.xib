@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmHabitViewController" customModule="HabitsRN" customModuleProvider="target">
             <connections>
+                <outlet property="createHabitButton" destination="nTF-i1-SFh" id="hXo-LI-9Jv"/>
                 <outlet property="habitImageView" destination="jUR-eQ-DPD" id="xhV-1F-yIW"/>
                 <outlet property="habitNameInputField" destination="M5I-qR-DMw" id="E5C-1Z-4q2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
