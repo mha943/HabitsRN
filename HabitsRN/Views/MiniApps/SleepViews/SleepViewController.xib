@@ -29,20 +29,21 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVL-02-EzQ">
                                             <rect key="frame" x="0.0" y="0.0" width="372.5" height="834.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Lorem ipsum dolor          ">
                                                     <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" metaFont="system" size="36"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                                 <fragment>
-                                                    <string key="content"> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Morbi non arcu risus quis varius quam quisque. Vel eros donec ac odio tempor orci dapibus ultrices in. Aliquet enim tortor at auctor urna. Lacus luctus accumsan tortor posuere ac ut consequat semper. Felis imperdiet proin fermentum leo vel orci. Cras fermentum odio eu feugiat. Aenean sed adipiscing diam donec adipiscing tristique risus. Ac odio tempor orci dapibus. Pharetra convallis posuere morbi leo urna molestie at elementum. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. A arcu cursus vitae congue mauris rhoncus aenean. Nam at lectus urna duis convallis convallis tellus id. Augue interdum velit euismod in pellentesque massa placerat duis. Aliquet bibendum enim facilisis gravida.
+                                                    <mutableString key="content"> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Morbi non arcu risus quis varius quam quisque. Vel eros donec ac odio tempor orci dapibus ultrices in. Aliquet enim tortor at auctor urna. Lacus luctus accumsan tortor posuere ac ut consequat semper. Felis imperdiet proin fermentum leo vel orci. Cras fermentum odio eu feugiat. Aenean sed adipiscing diam donec adipiscing tristique risus. Ac odio tempor orci dapibus. Pharetra convallis posuere morbi leo urna molestie at elementum. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. A arcu cursus vitae congue mauris rhoncus aenean. Nam at lectus urna duis convallis convallis tellus id. Augue interdum velit euismod in pellentesque massa placerat duis. Aliquet bibendum enim facilisis gravida.
 
-Tristique nulla aliquet enim tortor at auctor. Eu mi bibendum neque egestas congue quisque egestas diam in. Maecenas sed enim ut sem. Mi in nulla posuere sollicitudin aliquam ultrices sagittis. Consectetur lorem donec massa sapien faucibus et molestie. Imperdiet dui accumsan sit amet nulla facilisi morbi. Lorem ipsum dolor sit amet consectetur. Lacinia quis vel eros donec ac odio tempor orci dapibus. Fermentum odio eu feugiat pretium nibh. Sodales ut eu sem integer vitae justo eget magna. Mattis molestie a iaculis at erat. Netus et malesuada fames ac. Dignissim sodales ut eu sem. Vulputate enim nulla aliquet porttitor lacus. Lacus viverra vitae congue eu consequat ac felis donec et. Tincidunt vitae semper quis lectus.phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Semper risus in hendrerit gravida. Ridiculus mus mauris vitae ultricies.</string>
+Tristique nulla aliquet enim tortor at auctor. Eu mi bibendum neque egestas congue quisque egestas diam in. Maecenas sed enim ut sem. Mi in nulla posuere sollicitudin aliquam ultrices sagittis. Consectetur lorem donec massa sapien faucibus et molestie. Imperdiet dui accumsan sit amet nulla facilisi morbi. Lorem ipsum dolor sit amet consectetur. Lacinia quis vel eros donec ac odio tempor orci dapibus. Fermentum odio eu feugiat pretium nibh. Sodales ut eu sem integer vitae justo eget magna. Mattis molestie a iaculis at erat. Netus et malesuada fames ac. Dignissim sodales ut eu sem. Vulputate enim nulla aliquet porttitor lacus. Lacus viverra vitae congue eu consequat ac felis donec et. Tincidunt vitae semper quis lectus.phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Semper risus in hendrerit gravida. Ridiculus mus mauris vitae ultricies.</mutableString>
                                                     <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" metaFont="system" size="17"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
@@ -70,7 +71,7 @@ Tristique nulla aliquet enim tortor at auctor. Eu mi bibendum neque egestas cong
                                 <constraint firstAttribute="height" constant="100" id="uts-PA-476"/>
                             </constraints>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
-                            <state key="normal" title="Calculated Recommended Sleep">
+                            <state key="normal" title="Calculate Recommended Sleep">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
