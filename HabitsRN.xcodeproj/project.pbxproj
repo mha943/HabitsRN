@@ -26,6 +26,10 @@
 		41D4109E25F864FD005C2104 /* SleepViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D4109C25F864FD005C2104 /* SleepViewController.xib */; };
 		41DEC67125F9B5A1002CE4E3 /* SleepRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DEC66F25F9B5A1002CE4E3 /* SleepRecommendViewController.swift */; };
 		41DEC67225F9B5A1002CE4E3 /* SleepRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41DEC67025F9B5A1002CE4E3 /* SleepRecommendViewController.xib */; };
+		41FE4DC825FD69D600963EE7 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FE4DC625FD69D600963EE7 /* MeditationViewController.swift */; };
+		41FE4DC925FD69D600963EE7 /* MeditationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FE4DC725FD69D600963EE7 /* MeditationViewController.xib */; };
+		41FE4DCE25FD6E0E00963EE7 /* NutritionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FE4DCC25FD6E0E00963EE7 /* NutritionViewController.swift */; };
+		41FE4DCF25FD6E0E00963EE7 /* NutritionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41FE4DCD25FD6E0E00963EE7 /* NutritionViewController.xib */; };
 		41FF929125E9C18B008B3AF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FF929025E9C18B008B3AF7 /* AppDelegate.swift */; };
 		41FF929325E9C18B008B3AF7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FF929225E9C18B008B3AF7 /* SceneDelegate.swift */; };
 		41FF929A25E9C18D008B3AF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41FF929925E9C18D008B3AF7 /* Assets.xcassets */; };
@@ -55,6 +59,10 @@
 		41D4109C25F864FD005C2104 /* SleepViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SleepViewController.xib; sourceTree = "<group>"; };
 		41DEC66F25F9B5A1002CE4E3 /* SleepRecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepRecommendViewController.swift; sourceTree = "<group>"; };
 		41DEC67025F9B5A1002CE4E3 /* SleepRecommendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SleepRecommendViewController.xib; sourceTree = "<group>"; };
+		41FE4DC625FD69D600963EE7 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
+		41FE4DC725FD69D600963EE7 /* MeditationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeditationViewController.xib; sourceTree = "<group>"; };
+		41FE4DCC25FD6E0E00963EE7 /* NutritionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionViewController.swift; sourceTree = "<group>"; };
+		41FE4DCD25FD6E0E00963EE7 /* NutritionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionViewController.xib; sourceTree = "<group>"; };
 		41FF928D25E9C18B008B3AF7 /* HabitsRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitsRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FF929025E9C18B008B3AF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41FF929225E9C18B008B3AF7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,11 +134,31 @@
 		41D4109525F85B6A005C2104 /* MiniApps */ = {
 			isa = PBXGroup;
 			children = (
+				41FE4DCB25FD6DE200963EE7 /* NutritionView */,
+				41FE4DC525FD694400963EE7 /* MeditationView */,
 				41C95E5825F9945B0072B77B /* SleepViews */,
 				41D4109625F85B9E005C2104 /* SuggestionViewController.swift */,
 				41D4109725F85B9E005C2104 /* SuggestionViewController.xib */,
 			);
 			path = MiniApps;
+			sourceTree = "<group>";
+		};
+		41FE4DC525FD694400963EE7 /* MeditationView */ = {
+			isa = PBXGroup;
+			children = (
+				41FE4DC625FD69D600963EE7 /* MeditationViewController.swift */,
+				41FE4DC725FD69D600963EE7 /* MeditationViewController.xib */,
+			);
+			path = MeditationView;
+			sourceTree = "<group>";
+		};
+		41FE4DCB25FD6DE200963EE7 /* NutritionView */ = {
+			isa = PBXGroup;
+			children = (
+				41FE4DCC25FD6E0E00963EE7 /* NutritionViewController.swift */,
+				41FE4DCD25FD6E0E00963EE7 /* NutritionViewController.xib */,
+			);
+			path = NutritionView;
 			sourceTree = "<group>";
 		};
 		41FF928425E9C18B008B3AF7 = {
@@ -239,7 +267,9 @@
 				414AF28125F45F70000BAF48 /* AddHabitViewController.xib in Resources */,
 				414AF28B25F7086F000BAF48 /* ConfirmHabitViewController.xib in Resources */,
 				41D4109925F85B9E005C2104 /* SuggestionViewController.xib in Resources */,
+				41FE4DC925FD69D600963EE7 /* MeditationViewController.xib in Resources */,
 				41FF92AA25E9C94F008B3AF7 /* HabitsTableViewController.xib in Resources */,
+				41FE4DCF25FD6E0E00963EE7 /* NutritionViewController.xib in Resources */,
 				41A6E5E725EAD2280090CBE8 /* HabitTableViewCell.xib in Resources */,
 				414AF28625F46A00000BAF48 /* HabitImageCollectionViewCell.xib in Resources */,
 				41DEC67225F9B5A1002CE4E3 /* SleepRecommendViewController.xib in Resources */,
@@ -260,6 +290,7 @@
 				41D4109825F85B9E005C2104 /* SuggestionViewController.swift in Sources */,
 				41A6E5DD25EAC8F50090CBE8 /* Habit.swift in Sources */,
 				41FF929125E9C18B008B3AF7 /* AppDelegate.swift in Sources */,
+				41FE4DC825FD69D600963EE7 /* MeditationViewController.swift in Sources */,
 				41857D0825F27C1200477F8F /* PersistenceLayer.swift in Sources */,
 				41FF929325E9C18B008B3AF7 /* SceneDelegate.swift in Sources */,
 				41FF92A925E9C94F008B3AF7 /* HabitsTableViewController.swift in Sources */,
@@ -269,6 +300,7 @@
 				414AF28025F45F70000BAF48 /* AddHabitViewController.swift in Sources */,
 				414AF28A25F7086F000BAF48 /* ConfirmHabitViewController.swift in Sources */,
 				41A6E5E125EACB640090CBE8 /* DateExtensions.swift in Sources */,
+				41FE4DCE25FD6E0E00963EE7 /* NutritionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

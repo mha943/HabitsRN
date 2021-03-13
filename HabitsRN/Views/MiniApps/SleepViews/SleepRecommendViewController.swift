@@ -22,6 +22,7 @@ class SleepRecommendViewController: UIViewController {
         dialoglabel.text = " \n"
         recommendLabel.text = " "
         slider.value = 30
+        setupNavBar()
         // Do any additional setup after loading the view.
     }
     
@@ -44,14 +45,17 @@ class SleepRecommendViewController: UIViewController {
         recommendLabel.text = String("\(recValue) Hours")
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+}
+extension SleepRecommendViewController{
+    // sets the title and then adds a done button
+    func setupNavBar(){
+        // Do any additional setup after loading the view.
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action:#selector(pressDone(_:)))
+        navigationItem.rightBarButtonItem = doneButton
+    }
     
+    // done button returns to the main page
+    @objc func pressDone(_ sender: UIBarButtonItem){
+         navigationController?.popToRootViewController(animated: true)
+    }
 }

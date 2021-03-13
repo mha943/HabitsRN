@@ -21,6 +21,17 @@ class SuggestionViewController: UIViewController {
         navigationController?.pushViewController(sleepVC, animated: true)
     }
     
+    @IBAction func meditationButtonPressed(_ sender: Any) {
+        let meditationVC = MeditationViewController.instaniate()
+        navigationController?.pushViewController(meditationVC, animated: true)
+        
+    }
+    
+    @IBAction func nutritionButtonPressed(_ sender: Any) {
+        let nutritionVC = NutritionViewController.instaniate()
+        navigationController?.pushViewController(nutritionVC, animated: true)
+    }
+    
     
 
 }

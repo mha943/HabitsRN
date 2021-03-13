@@ -11,15 +11,23 @@ class SleepViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Suggested Sleep Habits"
-        // Do any additional setup after loading the view.
+        setupNavBar()
     }
 
-
+    // navigates to next page
     @IBAction func recomendSleepButtonPressed(_ sender: Any) {
         let sleepRecVC = SleepRecommendViewController.instaniate()
         navigationController?.pushViewController(sleepRecVC, animated: true)
     }
     
 
+}
+
+extension SleepViewController{
+    
+    func setupNavBar(){
+        title = "Suggested Sleep Habits"
+
+    }
+    
 }

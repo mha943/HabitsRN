@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MeditationViewController" customModule="HabitsRN" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="l6r-Vl-q9E" id="dzX-Fl-V1T"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="l6r-Vl-q9E">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZIJ-Bo-9Df">
+                    <rect key="frame" x="0.0" y="59" width="414" height="787"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSL-hb-eY5">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="657"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ogs-An-y6T">
+                                    <rect key="frame" x="20" y="0.0" width="372.5" height="834.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8K-jC-B56">
+                                            <rect key="frame" x="0.0" y="0.0" width="372.5" height="834.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Lorem ipsum dolor          ">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" metaFont="system" size="36"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content"> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Morbi non arcu risus quis varius quam quisque. Vel eros donec ac odio tempor orci dapibus ultrices in. Aliquet enim tortor at auctor urna. Lacus luctus accumsan tortor posuere ac ut consequat semper. Felis imperdiet proin fermentum leo vel orci. Cras fermentum odio eu feugiat. Aenean sed adipiscing diam donec adipiscing tristique risus. Ac odio tempor orci dapibus. Pharetra convallis posuere morbi leo urna molestie at elementum. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum. A arcu cursus vitae congue mauris rhoncus aenean. Nam at lectus urna duis convallis convallis tellus id. Augue interdum velit euismod in pellentesque massa placerat duis. Aliquet bibendum enim facilisis gravida.
+
+Tristique nulla aliquet enim tortor at auctor. Eu mi bibendum neque egestas congue quisque egestas diam in. Maecenas sed enim ut sem. Mi in nulla posuere sollicitudin aliquam ultrices sagittis. Consectetur lorem donec massa sapien faucibus et molestie. Imperdiet dui accumsan sit amet nulla facilisi morbi. Lorem ipsum dolor sit amet consectetur. Lacinia quis vel eros donec ac odio tempor orci dapibus. Fermentum odio eu feugiat pretium nibh. Sodales ut eu sem integer vitae justo eget magna. Mattis molestie a iaculis at erat. Netus et malesuada fames ac. Dignissim sodales ut eu sem. Vulputate enim nulla aliquet porttitor lacus. Lacus viverra vitae congue eu consequat ac felis donec et. Tincidunt vitae semper quis lectus.phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Semper risus in hendrerit gravida. Ridiculus mus mauris vitae ultricies.</string>
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" metaFont="system" size="17"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Ogs-An-y6T" firstAttribute="bottom" secondItem="E5c-8a-lqs" secondAttribute="bottom" id="8nJ-7v-TJc"/>
+                                <constraint firstItem="Ogs-An-y6T" firstAttribute="width" secondItem="cKA-dS-w2e" secondAttribute="width" multiplier="0.9" id="XgF-Bd-bay"/>
+                                <constraint firstItem="Ogs-An-y6T" firstAttribute="top" secondItem="E5c-8a-lqs" secondAttribute="top" id="sOC-3i-LW7"/>
+                                <constraint firstItem="Ogs-An-y6T" firstAttribute="trailing" secondItem="E5c-8a-lqs" secondAttribute="trailing" id="v5x-EG-F7K"/>
+                                <constraint firstItem="Ogs-An-y6T" firstAttribute="leading" secondItem="E5c-8a-lqs" secondAttribute="leading" constant="20" id="zqt-LB-NNa"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="E5c-8a-lqs"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="cKA-dS-w2e"/>
+                        </scrollView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBN-17-irp">
+                            <rect key="frame" x="0.0" y="687" width="414" height="100"/>
+                            <color key="backgroundColor" red="0.052609611100000002" green="0.60869582980000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="tOP-RS-CZB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="25"/>
+                            <state key="normal" title="Breathing Animation">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="JBN-17-irp" firstAttribute="top" secondItem="hSL-hb-eY5" secondAttribute="bottom" constant="30" id="24h-wv-Oue"/>
+                        <constraint firstItem="hSL-hb-eY5" firstAttribute="leading" secondItem="ZIJ-Bo-9Df" secondAttribute="leading" id="46K-jS-FO6"/>
+                        <constraint firstItem="hSL-hb-eY5" firstAttribute="top" secondItem="ZIJ-Bo-9Df" secondAttribute="top" id="5Oa-p0-J3q"/>
+                        <constraint firstItem="hSL-hb-eY5" firstAttribute="leading" secondItem="ZIJ-Bo-9Df" secondAttribute="leading" id="DV5-VB-Nch"/>
+                        <constraint firstItem="hSL-hb-eY5" firstAttribute="top" secondItem="ZIJ-Bo-9Df" secondAttribute="top" id="J5h-JU-vGD"/>
+                        <constraint firstAttribute="trailing" secondItem="hSL-hb-eY5" secondAttribute="trailing" id="SEh-2A-sR5"/>
+                        <constraint firstAttribute="trailing" secondItem="hSL-hb-eY5" secondAttribute="trailing" id="iPl-o3-gRM"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="s40-S1-5Dz"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ZIJ-Bo-9Df" firstAttribute="leading" secondItem="s40-S1-5Dz" secondAttribute="leading" id="26W-JY-2EI"/>
+                <constraint firstItem="s40-S1-5Dz" firstAttribute="trailing" secondItem="ZIJ-Bo-9Df" secondAttribute="trailing" id="TVs-X9-Y0y"/>
+                <constraint firstAttribute="bottom" secondItem="ZIJ-Bo-9Df" secondAttribute="bottom" constant="50" id="Uum-s7-MZD"/>
+                <constraint firstItem="ZIJ-Bo-9Df" firstAttribute="top" secondItem="s40-S1-5Dz" secondAttribute="top" constant="15" id="h3j-Iw-j0g"/>
+            </constraints>
+            <point key="canvasLocation" x="-33.333333333333336" y="87.723214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
