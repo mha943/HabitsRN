@@ -15,7 +15,12 @@ class MeditationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func breatheButtonPressed(_ sender: Any) {
+        let breatheVC = BreatheViewController.instaniate()
+        
+        navigationController?.pushViewController(breatheVC, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

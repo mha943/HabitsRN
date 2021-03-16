@@ -74,6 +74,9 @@ Tristique nulla aliquet enim tortor at auctor. Eu mi bibendum neque egestas cong
                             <state key="normal" title="Breathing Animation">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="breatheButtonPressed:" destination="-1" eventType="touchUpInside" id="rf7-SF-wdF"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
