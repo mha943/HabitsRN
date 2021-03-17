@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BreatheViewController" customModule="HabitsRN" customModuleProvider="target">
             <connections>
+                <outlet property="slider" destination="TLN-vz-K6k" id="3kB-Fq-rpr"/>
                 <outlet property="stackView" destination="0pI-t6-Rfq" id="NdJ-A9-npd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,13 +20,25 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0pI-t6-Rfq">
-                    <rect key="frame" x="152" y="348" width="110" height="200"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0pI-t6-Rfq">
+                    <rect key="frame" x="15" y="782" width="384" height="30"/>
+                    <subviews>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3.5" minValue="2" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="TLN-vz-K6k">
+                            <rect key="frame" x="-2" y="0.0" width="388" height="31"/>
+                            <connections>
+                                <action selector="sliderRelease:" destination="-1" eventType="valueChanged" id="1U8-XK-A0B"/>
+                            </connections>
+                        </slider>
+                    </subviews>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0pI-t6-Rfq" secondAttribute="trailing" constant="15" id="Qz4-hN-V6N"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0pI-t6-Rfq" secondAttribute="bottom" constant="50" id="eY5-97-ViX"/>
+                <constraint firstItem="0pI-t6-Rfq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="jd9-eS-6mD"/>
+            </constraints>
             <point key="canvasLocation" x="42" y="83"/>
         </view>
     </objects>
