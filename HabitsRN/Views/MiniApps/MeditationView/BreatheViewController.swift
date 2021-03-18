@@ -57,11 +57,10 @@ struct myContentView : View {
             let size: CGFloat = 150
             let shrink: CGFloat = 0.25
             let swell: CGFloat = 1.1
-            //let lightGreen = UIColor(displayP3Red: 0.1, green: 1, blue: 0.1, alpha: 0.2)
-
+            
             Circle()//Background Circle
                 .frame(width: size, height: size)
-                .foregroundColor(Color.green.opacity(0.2))
+                .foregroundColor(Color.green.opacity(0.15))
                 //.offset(x: isCenter ? 0 : 75)
                 //.rotationEffect(Angle(degrees: isCenter2 ? 0 : -270))
                 .scaleEffect(isCenter ? shrink/4 : swell*2.2)
