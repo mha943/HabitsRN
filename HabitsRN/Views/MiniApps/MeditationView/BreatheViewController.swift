@@ -15,7 +15,7 @@ class BreatheViewController: UIViewController {
     var contentView = UIHostingController(rootView: myContentView())
     override func viewDidLoad() {
         super.viewDidLoad()
-        slider.value = 3.25
+        slider.value = 3.15
         startAnimating()
         view.backgroundColor = UIColor.black
         BreatheViewController.speed = Double(slider.value)
@@ -59,67 +59,74 @@ struct myContentView : View {
             let swell: CGFloat = 1.1
             //let lightGreen = UIColor(displayP3Red: 0.1, green: 1, blue: 0.1, alpha: 0.2)
 
+            Circle()//Background Circle
+                .frame(width: size, height: size)
+                .foregroundColor(Color.green.opacity(0.2))
+                //.offset(x: isCenter ? 0 : 75)
+                //.rotationEffect(Angle(degrees: isCenter2 ? 0 : -270))
+                .scaleEffect(isCenter ? shrink/4 : swell*2.2)
+                .blur(radius: 5)
             Circle()//right
                 .frame(width: size, height: size)
-                .foregroundColor(Color.green.opacity(0.3))
+                .foregroundColor(Color.green.opacity(0.2))
                 .offset(x: isCenter ? 0 : 75)
-                .rotationEffect(Angle(degrees: isCenter2 ? 0 : 360))
+                .rotationEffect(Angle(degrees: isCenter2 ? 0 : -270))
                 .scaleEffect(isCenter ? shrink : swell)
-                .blur(radius: 1.0)
+                .blur(radius: 1)
             Circle()//down
                 .frame(width: size, height: size)
-                .foregroundColor(Color.green.opacity(0.3))
+                .foregroundColor(Color.green.opacity(0.2))
                 .offset(y: isCenter ? 0 : 75)
-                .rotationEffect(Angle(degrees: isCenter2 ? 0 : 360))
+                .rotationEffect(Angle(degrees: isCenter2 ? 0 : -270))
                 .scaleEffect(isCenter ? shrink : swell)
-                .blur(radius: 1.0)
+                .blur(radius: 1)
             Circle()//left
                 .frame(width: size, height: size)
-                .foregroundColor(Color.green.opacity(0.3))
+                .foregroundColor(Color.green.opacity(0.2))
                 .offset(x: isCenter ? 0 : -75)
-                .rotationEffect(Angle(degrees: isCenter2 ? 0 : 360))
+                .rotationEffect(Angle(degrees: isCenter2 ? 0 : -270))
                 .scaleEffect(isCenter ? shrink : swell)
-                .blur(radius: 1.0)
+                .blur(radius: 1)
             Circle()//up
                 .frame(width: size, height: size)
-                .foregroundColor(Color.green.opacity(0.3))
+                .foregroundColor(Color.green.opacity(0.2))
                 .offset(y: isCenter ? 0 : -75)
-                .rotationEffect(Angle(degrees: isCenter2 ? 0 : 360))
+                .rotationEffect(Angle(degrees: isCenter2 ? 0 : -270))
                 .scaleEffect(isCenter ? shrink : swell)
-                .blur(radius: 1.0)
+                .blur(radius: 1)
             Circle()//upleft
                 .frame(width: size, height: size)
-                .foregroundColor(Color.green.opacity(0.3))
+                .foregroundColor(Color.green.opacity(0.2))
                 .offset(y: isCenter ? 0 : -60)
                 .offset(x: isCenter ? 0 : -50)
-                .rotationEffect(Angle(degrees: isCenter2 ? 0 : 360))
+                .rotationEffect(Angle(degrees: isCenter2 ? 0 : -270))
                 .scaleEffect(isCenter ? shrink : swell)
-                .blur(radius: 1.0)
+                .blur(radius: 1)
             Circle()//upright
                 .frame(width: size, height: size)
-                .foregroundColor(Color.green.opacity(0.3))
+                .foregroundColor(Color.green.opacity(0.2))
                 .offset(y: isCenter ? 0 : -60)
                 .offset(x: isCenter ? 0 : 50)
-                .rotationEffect(Angle(degrees: isCenter2 ? 0 : 360))
+                .rotationEffect(Angle(degrees: isCenter2 ? 0 : -270))
                 .scaleEffect(isCenter ? shrink : swell)
-                .blur(radius: 1.0)
+                .blur(radius: 1)
             Circle()//downright
                 .frame(width: size, height: size)
-                .foregroundColor(Color.green.opacity(0.3))
+                .foregroundColor(Color.green.opacity(0.2))
                 .offset(y: isCenter ? 0 : 60)
                 .offset(x: isCenter ? 0 : 50)
-                .rotationEffect(Angle(degrees: isCenter2 ? 0 : 360))
+                .rotationEffect(Angle(degrees: isCenter2 ? 0 : -270))
                 .scaleEffect(isCenter ? shrink : swell)
-                .blur(radius: 1.0)
+                .blur(radius: 1)
             Circle()//downleft
                 .frame(width: size, height: size)
-                .foregroundColor(Color.green.opacity(0.3))
+                .foregroundColor(Color.green.opacity(0.2))
                 .offset(y: isCenter ? 0 : 60)
                 .offset(x: isCenter ? 0 : -50)
-                .rotationEffect(Angle(degrees: isCenter2 ? 0 : 360))
+                .rotationEffect(Angle(degrees: isCenter2 ? 0 : -270))
                 .scaleEffect(isCenter ? shrink : swell)
-                .blur(radius: 1.0)
-                
+                .blur(radius: 1)
+
         }
         .onAppear(){
             let animation = Animation.linear(duration: BreatheViewController.speed).delay(0.5)

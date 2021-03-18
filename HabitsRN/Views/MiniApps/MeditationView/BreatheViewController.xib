@@ -23,7 +23,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0pI-t6-Rfq">
                     <rect key="frame" x="15" y="782" width="384" height="30"/>
                     <subviews>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3.5" minValue="2" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="TLN-vz-K6k">
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="2.5" maxValue="3.75" translatesAutoresizingMaskIntoConstraints="NO" id="TLN-vz-K6k">
                             <rect key="frame" x="-2" y="0.0" width="388" height="31"/>
                             <connections>
                                 <action selector="sliderRelease:" destination="-1" eventType="valueChanged" id="1U8-XK-A0B"/>
