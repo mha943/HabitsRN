@@ -32,6 +32,7 @@ class HabitDetailViewController: UIViewController {
         updateUI()
         HabitDetailViewController.habit2 = habit
         HabitDetailViewController.habitIndex2 = habitIndex
+        notificationTime.text = "Reminder"
     }
     
     // marks the habit as completed and then updates the UI
@@ -65,7 +66,7 @@ class HabitDetailViewController: UIViewController {
         }else{
             notificationSwitch.setOn(false, animated: false)
         }
-        notificationTime.text = "\(habit.notifyHour):\(habit.notifyMinute)"
+        //notificationTime.text = "\(habit.notifyHour):\(habit.notifyMinute)"
         
         if habit.completedToday{
             buttonAction.setTitle("Completed Today!", for: .normal)

@@ -55,4 +55,27 @@ struct Habit : Codable{
         self.title = title
         self.selectedImage = image
     }
+    
+    func setNotification(){
+        
+       //Link Describing how to set a local notification https://www.donnywals.com/scheduling-daily-notifications-on-ios-using-calendar-and-datecomponents/
+        var dateComponents = DateComponents()
+        dateComponents.hour = notifyHour
+        dateComponents.minute = notifyMinute
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Daily Reminder"
+        content.body = "\(title)"
+        
+        let randomIdentifier = UUID().uuidString
+        let request = UNNotificationRequest(identifier: randomIdentifier, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request){ error in
+            if error != nil {
+                print("Failed Notification")
+            }
+            
+        }
+    }
 }

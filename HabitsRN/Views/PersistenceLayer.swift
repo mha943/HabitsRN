@@ -124,6 +124,7 @@ struct PersistenceLayer{
 
         updatedHabit.notifyHour = hour
         updatedHabit.notifyMinute = min
+        updatedHabit.setNotification()
         // place the habit back into the array
         self.habits[habitIndex] = updatedHabit
         
