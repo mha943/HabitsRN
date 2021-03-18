@@ -20,16 +20,34 @@ class HabitDetailViewController: UIViewController {
     @IBOutlet weak var labelBestStreak: UILabel!
     @IBOutlet weak var labelStartingDate: UILabel!
     @IBOutlet weak var buttonAction: UIButton!
+    @IBOutlet weak var notificationSwitch: UISwitch!
+    
+    @IBOutlet weak var notificationTime: UILabel!
+    
+    static var habit2: Habit!
+    static var habitIndex2: Int!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateUI()
+        HabitDetailViewController.habit2 = habit
+        HabitDetailViewController.habitIndex2 = habitIndex
     }
-
+    
     // marks the habit as completed and then updates the UI
     @IBAction func pressActionButton(_ sender: Any) {
         habit = persistence.markHabitAsCompleted(habitIndex)
         updateUI()
+    }
+    @IBAction func notificationSwitchRelease(_ sender: Any) {
+        habit = persistence.setNotificationHabit(habitIndex)
+        habit.notificationBool = notificationSwitch.isOn
+
+        if habit.notificationBool == true{
+            let setNotifyVC = SetNotificationViewController.instaniate()
+            navigationController?.pushViewController(setNotifyVC, animated: true)
+        }
+        
     }
     
     private func updateUI(){
@@ -40,12 +58,22 @@ class HabitDetailViewController: UIViewController {
         labelBestStreak.text = String(habit.bestStreak)
         labelStartingDate.text = habit.dateCreated.stringValue
         
+        //habit.notificationBool = notificationSwitch.isOn
+        
+        if habit.notificationBool{
+            notificationSwitch.setOn(true, animated: false)
+        }else{
+            notificationSwitch.setOn(false, animated: false)
+        }
+        notificationTime.text = "\(habit.notifyHour):\(habit.notifyMinute)"
+        
         if habit.completedToday{
             buttonAction.setTitle("Completed Today!", for: .normal)
         } else{
             buttonAction.setTitle("Mark As Complete", for: .normal)
         }
     }
+    
     
     /*
     // MARK: - Navigation

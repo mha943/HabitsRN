@@ -16,6 +16,8 @@
 		414AF29025F7F279000BAF48 /* HabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414AF28E25F7F279000BAF48 /* HabitDetailViewController.swift */; };
 		414AF29125F7F279000BAF48 /* HabitDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 414AF28F25F7F279000BAF48 /* HabitDetailViewController.xib */; };
 		41857D0825F27C1200477F8F /* PersistenceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41857D0725F27C1200477F8F /* PersistenceLayer.swift */; };
+		41A29D4C2603B5AB0026C4F6 /* SetNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A29D4A2603B5AB0026C4F6 /* SetNotificationViewController.swift */; };
+		41A29D4D2603B5AB0026C4F6 /* SetNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A29D4B2603B5AB0026C4F6 /* SetNotificationViewController.xib */; };
 		41A6E5DD25EAC8F50090CBE8 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E5DC25EAC8F50090CBE8 /* Habit.swift */; };
 		41A6E5E125EACB640090CBE8 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E5E025EACB640090CBE8 /* DateExtensions.swift */; };
 		41A6E5E625EAD2280090CBE8 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E5E425EAD2280090CBE8 /* HabitTableViewCell.swift */; };
@@ -51,6 +53,8 @@
 		414AF28E25F7F279000BAF48 /* HabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewController.swift; sourceTree = "<group>"; };
 		414AF28F25F7F279000BAF48 /* HabitDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitDetailViewController.xib; sourceTree = "<group>"; };
 		41857D0725F27C1200477F8F /* PersistenceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceLayer.swift; sourceTree = "<group>"; };
+		41A29D4A2603B5AB0026C4F6 /* SetNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNotificationViewController.swift; sourceTree = "<group>"; };
+		41A29D4B2603B5AB0026C4F6 /* SetNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetNotificationViewController.xib; sourceTree = "<group>"; };
 		41A6E5DC25EAC8F50090CBE8 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		41A6E5E025EACB640090CBE8 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		41A6E5E425EAD2280090CBE8 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,9 +106,19 @@
 			path = CreatingViews;
 			sourceTree = "<group>";
 		};
+		41A29D482603B58C0026C4F6 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				41A29D4A2603B5AB0026C4F6 /* SetNotificationViewController.swift */,
+				41A29D4B2603B5AB0026C4F6 /* SetNotificationViewController.xib */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		41A6E5DB25EAC8DF0090CBE8 /* Habit */ = {
 			isa = PBXGroup;
 			children = (
+				41A29D482603B58C0026C4F6 /* Notifications */,
 				41A6E5DC25EAC8F50090CBE8 /* Habit.swift */,
 				41A6E5E025EACB640090CBE8 /* DateExtensions.swift */,
 				414AF28E25F7F279000BAF48 /* HabitDetailViewController.swift */,
@@ -268,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41D4109E25F864FD005C2104 /* SleepViewController.xib in Resources */,
+				41A29D4D2603B5AB0026C4F6 /* SetNotificationViewController.xib in Resources */,
 				414AF29125F7F279000BAF48 /* HabitDetailViewController.xib in Resources */,
 				41FF929D25E9C18D008B3AF7 /* LaunchScreen.storyboard in Resources */,
 				414AF28125F45F70000BAF48 /* AddHabitViewController.xib in Resources */,
@@ -303,6 +318,7 @@
 				41FF92A925E9C94F008B3AF7 /* HabitsTableViewController.swift in Sources */,
 				41A6E5E625EAD2280090CBE8 /* HabitTableViewCell.swift in Sources */,
 				414AF28525F46A00000BAF48 /* HabitImageCollectionViewCell.swift in Sources */,
+				41A29D4C2603B5AB0026C4F6 /* SetNotificationViewController.swift in Sources */,
 				41DEC67125F9B5A1002CE4E3 /* SleepRecommendViewController.swift in Sources */,
 				414AF28025F45F70000BAF48 /* AddHabitViewController.swift in Sources */,
 				41F2EDCF260114E5009CCAB9 /* BreatheViewController.swift in Sources */,

@@ -42,6 +42,9 @@ struct Habit : Codable{
     var bestStreak: Int = 0
     var lastCompletionDate: Date?
     var numberOfCompletions: Int = 0
+    var notificationBool: Bool = false
+    var notifyHour: Int = 0
+    var notifyMinute: Int = 0
     
     //checks if completed, if nil then returns false
     var completedToday: Bool {

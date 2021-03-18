@@ -93,7 +93,7 @@ struct PersistenceLayer{
         return updatedHabit
     }
     
-    // given a idex and destination index the destination
+    // given a index and destination index the destination
     mutating func swapHabits(habitIndex: Int, destinationIndex: Int){
         let habitToSwap = self.habits[habitIndex]
         self.habits.remove(at: habitIndex)
@@ -106,4 +106,29 @@ struct PersistenceLayer{
         self.loadHabits()
     }
     
+    mutating func setNotificationHabit(_ habitIndex: Int) -> Habit{
+        var updatedHabit = self.habits[habitIndex]
+        
+        updatedHabit.notificationBool = !updatedHabit.notificationBool
+        
+        // place the habit back into the array
+        self.habits[habitIndex] = updatedHabit
+        
+        self.saveHabits()
+        
+        return updatedHabit
+    }
+    
+    mutating func setNotificationDate(_ habitIndex: Int, hour: Int, min: Int) -> Habit{
+        var updatedHabit = self.habits[habitIndex]
+
+        updatedHabit.notifyHour = hour
+        updatedHabit.notifyMinute = min
+        // place the habit back into the array
+        self.habits[habitIndex] = updatedHabit
+        
+        self.saveHabits()
+    
+        return updatedHabit
+    }
 }

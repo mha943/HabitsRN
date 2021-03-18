@@ -49,6 +49,16 @@ class HabitsTableViewController: UITableViewController {
         tableView.register(
             HabitTableViewCell.nib, forCellReuseIdentifier: HabitTableViewCell.identifier)
         // Do any additional setup after loading the view.
+        
+        // Ask permission for notifications
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { success, error in
+            if error == nil && success{
+                print("we have permission")
+            }else{
+                print("no Permission :(")
+            }
+        }
+        
     }
     
     // method to call the habitDetailView when selecting a habit row
