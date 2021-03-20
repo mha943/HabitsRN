@@ -9,8 +9,6 @@ import UIKit
 
 class SetNotificationViewController: UIViewController {
     
-    var habit: Habit!
-    var habitIndex: Int!
     
     private var persistence = PersistenceLayer()
     
@@ -57,6 +55,10 @@ extension SetNotificationViewController{
     // done button returns to the main page
     @objc func pressCancel(_ sender: UIBarButtonItem){
          navigationController?.popViewController(animated: true)
+        
+        HabitDetailViewController.habit2 = persistence.unsetNotification(HabitDetailViewController.habitIndex2)
+        // turn off switch somehow
+        //navigationController?.viewWillAppear(true)
     }
 }
 

@@ -45,7 +45,9 @@ struct Habit : Codable{
     var notificationBool: Bool = false
     var notifyHour: Int = 0
     var notifyMinute: Int = 0
-    
+    //set the notification identifier here so it can be deleted when altering the notification
+    var randomIdentifier = UUID().uuidString
+
     //checks if completed, if nil then returns false
     var completedToday: Bool {
         return lastCompletionDate?.isToday ?? false
@@ -56,8 +58,13 @@ struct Habit : Codable{
         self.selectedImage = image
     }
     
+    func deleteNotification(){
+        //delete the old notifiction
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [randomIdentifier])
+    }
+    
     func setNotification(){
-        
+        deleteNotification()
        //Link Describing how to set a local notification https://www.donnywals.com/scheduling-daily-notifications-on-ios-using-calendar-and-datecomponents/
         var dateComponents = DateComponents()
         dateComponents.hour = notifyHour
@@ -68,7 +75,6 @@ struct Habit : Codable{
         content.title = "Daily Reminder"
         content.body = "\(title)"
         
-        let randomIdentifier = UUID().uuidString
         let request = UNNotificationRequest(identifier: randomIdentifier, content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request){ error in

@@ -29,6 +29,7 @@ class HabitDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        print("View did load loaded")
         updateUI()
         HabitDetailViewController.habit2 = habit
         HabitDetailViewController.habitIndex2 = habitIndex
@@ -41,12 +42,15 @@ class HabitDetailViewController: UIViewController {
         updateUI()
     }
     @IBAction func notificationSwitchRelease(_ sender: Any) {
+        
         habit = persistence.setNotificationHabit(habitIndex)
         habit.notificationBool = notificationSwitch.isOn
 
         if habit.notificationBool == true{
             let setNotifyVC = SetNotificationViewController.instaniate()
             navigationController?.pushViewController(setNotifyVC, animated: true)
+        }else{
+            habit = persistence.unsetNotification(habitIndex)
         }
         
     }

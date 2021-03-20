@@ -58,6 +58,8 @@ struct PersistenceLayer{
     }
     
     mutating func delete(_ habitIndex: Int){
+        //delete the old notifiction
+        habits[habitIndex].deleteNotification()
         // remove the habit from the indicated index
         self.habits.remove(at: habitIndex)
         self.saveHabits()
@@ -108,14 +110,13 @@ struct PersistenceLayer{
     
     mutating func setNotificationHabit(_ habitIndex: Int) -> Habit{
         var updatedHabit = self.habits[habitIndex]
-        
+
         updatedHabit.notificationBool = !updatedHabit.notificationBool
-        
+
         // place the habit back into the array
         self.habits[habitIndex] = updatedHabit
-        
         self.saveHabits()
-        
+
         return updatedHabit
     }
     
@@ -127,7 +128,16 @@ struct PersistenceLayer{
         updatedHabit.setNotification()
         // place the habit back into the array
         self.habits[habitIndex] = updatedHabit
-        
+        self.saveHabits()
+    
+        return updatedHabit
+    }
+    
+    mutating func unsetNotification(_ habitIndex: Int) -> Habit{
+        let updatedHabit = self.habits[habitIndex]
+        //delete the old notifiction
+        updatedHabit.deleteNotification()
+        self.habits[habitIndex] = updatedHabit
         self.saveHabits()
     
         return updatedHabit
