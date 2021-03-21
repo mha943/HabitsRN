@@ -43,11 +43,11 @@ class ConfirmHabitViewController: UIViewController {
     }
     
     // From https://www.codingexplorer.com/how-to-dismiss-uitextfields-keyboard-in-your-swift-app/
+    // dismisses keyboard when you touch outside of it
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
-    
     
     
     // Adapted from https://medium.com/@PaulWall43/how-to-raise-a-uitextfield-when-the-keyboard-shows-ccfa6553c911
@@ -59,6 +59,7 @@ class ConfirmHabitViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(ConfirmHabitViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+    // move the view up when the keyboard is activated
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let userInfo = notification.userInfo else {return}
         guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else{return}
@@ -67,7 +68,7 @@ class ConfirmHabitViewController: UIViewController {
             self.view.frame.origin.y -= (keyboardFrame.height)/1.25
         }
     }
-    
+    // move the view back down when keyboard dismissed
     @objc func keyboardWillHide(notification: NSNotification) {
         if self.view.frame.origin.y != 0{
             self.view.frame.origin.y = 0

@@ -26,6 +26,7 @@ class SleepRecommendViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // based on slider value, updates labels to display reccommened sleep hours
     @IBAction func sliderChanged(_ sender: Any) {
         dialoglabel.text = "Your Recommended Sleep is:"
         var recValue = ""
@@ -49,7 +50,6 @@ class SleepRecommendViewController: UIViewController {
 extension SleepRecommendViewController{
     // sets the title and then adds a done button
     func setupNavBar(){
-        // Do any additional setup after loading the view.
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action:#selector(pressDone(_:)))
         navigationItem.rightBarButtonItem = doneButton
     }

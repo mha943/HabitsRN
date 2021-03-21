@@ -22,6 +22,7 @@
 		41A6E5E125EACB640090CBE8 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E5E025EACB640090CBE8 /* DateExtensions.swift */; };
 		41A6E5E625EAD2280090CBE8 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6E5E425EAD2280090CBE8 /* HabitTableViewCell.swift */; };
 		41A6E5E725EAD2280090CBE8 /* HabitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A6E5E525EAD2280090CBE8 /* HabitTableViewCell.xib */; };
+		41D1C5272606CFE30051BB18 /* BreatheAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D1C5262606CFE30051BB18 /* BreatheAnimation.swift */; };
 		41D4109825F85B9E005C2104 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4109625F85B9E005C2104 /* SuggestionViewController.swift */; };
 		41D4109925F85B9E005C2104 /* SuggestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41D4109725F85B9E005C2104 /* SuggestionViewController.xib */; };
 		41D4109D25F864FD005C2104 /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D4109B25F864FD005C2104 /* SleepViewController.swift */; };
@@ -59,6 +60,7 @@
 		41A6E5E025EACB640090CBE8 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		41A6E5E425EAD2280090CBE8 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		41A6E5E525EAD2280090CBE8 /* HabitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitTableViewCell.xib; sourceTree = "<group>"; };
+		41D1C5262606CFE30051BB18 /* BreatheAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheAnimation.swift; sourceTree = "<group>"; };
 		41D4109625F85B9E005C2104 /* SuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
 		41D4109725F85B9E005C2104 /* SuggestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionViewController.xib; sourceTree = "<group>"; };
 		41D4109B25F864FD005C2104 /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				41FE4DC725FD69D600963EE7 /* MeditationViewController.xib */,
 				41F2EDCD260114E5009CCAB9 /* BreatheViewController.swift */,
 				41F2EDCE260114E5009CCAB9 /* BreatheViewController.xib */,
+				41D1C5262606CFE30051BB18 /* BreatheAnimation.swift */,
 			);
 			path = MeditationView;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				41DEC67125F9B5A1002CE4E3 /* SleepRecommendViewController.swift in Sources */,
 				414AF28025F45F70000BAF48 /* AddHabitViewController.swift in Sources */,
 				41F2EDCF260114E5009CCAB9 /* BreatheViewController.swift in Sources */,
+				41D1C5272606CFE30051BB18 /* BreatheAnimation.swift in Sources */,
 				414AF28A25F7086F000BAF48 /* ConfirmHabitViewController.swift in Sources */,
 				41A6E5E125EACB640090CBE8 /* DateExtensions.swift in Sources */,
 				41FE4DCE25FD6E0E00963EE7 /* NutritionViewController.swift in Sources */,

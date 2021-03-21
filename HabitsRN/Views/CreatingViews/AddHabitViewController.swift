@@ -30,7 +30,6 @@ class AddHabitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(HabitImageCollectionViewCell.nib, forCellWithReuseIdentifier: HabitImageCollectionViewCell.identifier)
-        // Do any additional setup after loading the view.
         setupNavBar()
     }
     

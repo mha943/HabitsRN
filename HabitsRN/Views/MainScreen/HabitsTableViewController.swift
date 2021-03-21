@@ -8,14 +8,6 @@
 import UIKit
 
 class HabitsTableViewController: UITableViewController {
-    //test array
-    //    var names: [String] = ["Alan", "Braus", "Max", "Libby", "Matthew"]
-    //    //test habits
-    //    var habits: [Habit] = [
-    //        Habit(title: "go to bed before 10pm", image: Habit.Images.book),
-    //        Habit(title: "exercise period, cuz i don't want to get fat",image: Habit.Images.book),
-    //        Habit(title: "work on capstone project", image: Habit.Images.book),
-    //    ]
     
     private var persistence = PersistenceLayer()
     
@@ -24,7 +16,6 @@ class HabitsTableViewController: UITableViewController {
         return persistence.habits.count
         
     }
-    
     
     // Return the UITableViewCell for the given indexPath
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
@@ -42,18 +33,17 @@ class HabitsTableViewController: UITableViewController {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         tableView.register(
             HabitTableViewCell.nib, forCellReuseIdentifier: HabitTableViewCell.identifier)
-        // Do any additional setup after loading the view.
         
         // Ask permission for notifications
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { success, error in
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
+            success, error in
             if error == nil && success{
-                print("we have permission")
+                print("permission granted")
             }else{
                 print("no Permission :(")
             }
@@ -98,7 +88,6 @@ class HabitsTableViewController: UITableViewController {
         navigationController?.pushViewController(suggestionVC, animated: true)
     }
     
-
 }
 
 extension HabitsTableViewController {

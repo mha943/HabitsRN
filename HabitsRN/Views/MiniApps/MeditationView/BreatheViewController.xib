@@ -11,7 +11,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BreatheViewController" customModule="HabitsRN" customModuleProvider="target">
             <connections>
                 <outlet property="slider" destination="TLN-vz-K6k" id="3kB-Fq-rpr"/>
-                <outlet property="stackView" destination="0pI-t6-Rfq" id="NdJ-A9-npd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +22,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0pI-t6-Rfq">
                     <rect key="frame" x="15" y="782" width="384" height="30"/>
                     <subviews>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="2.5" maxValue="3.75" translatesAutoresizingMaskIntoConstraints="NO" id="TLN-vz-K6k">
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="2.5" maxValue="3.75" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLN-vz-K6k">
                             <rect key="frame" x="-2" y="0.0" width="388" height="31"/>
                             <connections>
                                 <action selector="sliderRelease:" destination="-1" eventType="valueChanged" id="1U8-XK-A0B"/>

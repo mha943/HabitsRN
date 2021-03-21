@@ -20,7 +20,6 @@ class SleepViewController: UIViewController {
         navigationController?.pushViewController(sleepRecVC, animated: true)
     }
     
-
 }
 
 extension SleepViewController{
