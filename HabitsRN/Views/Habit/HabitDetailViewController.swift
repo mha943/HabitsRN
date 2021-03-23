@@ -29,7 +29,6 @@ class HabitDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("View did load loaded")
         updateUI()
         HabitDetailViewController.habit2 = habit
         HabitDetailViewController.habitIndex2 = habitIndex
@@ -70,7 +69,6 @@ class HabitDetailViewController: UIViewController {
         }else{
             notificationSwitch.setOn(false, animated: false)
         }
-        //notificationTime.text = "\(habit.notifyHour):\(habit.notifyMinute)"
         
         if habit.completedToday{
             buttonAction.setTitle("Completed Today!", for: .normal)
@@ -79,15 +77,4 @@ class HabitDetailViewController: UIViewController {
         }
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

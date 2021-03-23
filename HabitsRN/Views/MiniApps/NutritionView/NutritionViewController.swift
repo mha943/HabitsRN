@@ -14,7 +14,12 @@ class NutritionViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func nutritionButtonPressed(_ sender: Any) {
+        let nutritionAppVC = NutritionAppViewController.instaniate()
+        
+        navigationController?.pushViewController(nutritionAppVC, animated: true)
+    }
+    
 
     /*
     // MARK: - Navigation

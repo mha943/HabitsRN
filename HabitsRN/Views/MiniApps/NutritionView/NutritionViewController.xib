@@ -74,6 +74,9 @@ Tristique nulla aliquet enim tortor at auctor. Eu mi bibendum neque egestas cong
                             <state key="normal" title="Nutrition App">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="nutritionButtonPressed:" destination="-1" eventType="touchUpInside" id="Sy1-mR-IZy"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

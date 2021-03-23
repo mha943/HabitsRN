@@ -47,7 +47,7 @@ struct Habit : Codable{
     var notifyMinute: Int = 0
     //set the notification identifier here so it can be deleted when altering the notification
     var randomIdentifier = UUID().uuidString
-
+    
     //checks if completed, if nil then returns false
     var completedToday: Bool {
         return lastCompletionDate?.isToday ?? false
@@ -65,7 +65,7 @@ struct Habit : Codable{
     
     func setNotification(){
         deleteNotification()
-       //Link Describing how to set a local notification https://www.donnywals.com/scheduling-daily-notifications-on-ios-using-calendar-and-datecomponents/
+        //Link Describing how to set a local notification https://www.donnywals.com/scheduling-daily-notifications-on-ios-using-calendar-and-datecomponents/
         var dateComponents = DateComponents()
         dateComponents.hour = notifyHour
         dateComponents.minute = notifyMinute
