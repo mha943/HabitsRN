@@ -16,6 +16,7 @@ class NutritionAppViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var heightPicker: UIPickerView!
     @IBOutlet weak var activePicker: UIPickerView!
     @IBOutlet weak var otherPicker: UIPickerView!
+    
     @IBOutlet weak var weightTextbox: UITextField!
     @IBOutlet weak var ageTextbox: UITextField!
     
@@ -24,10 +25,12 @@ class NutritionAppViewController: UIViewController, UIPickerViewDelegate, UIPick
     var activePickerData: [String] = [String]()
     var otherPickerData: [String] = [String]()
     
-    var gender: String = "Female"
-    var height: (String, String) = ("4", "0")
-    var active: String = "Sedentary"
-    var other: String = "None"
+    static var gender: String = "Female"
+    static var height: (String, String) = ("4", "0")
+    static var active: String = "Sedentary"
+    static var other: String = "None"
+    static var weight: Int = 150
+    static var age: Int = 30
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +42,40 @@ class NutritionAppViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
     @IBAction func calculateCaloriesButtonPressed(_ sender: Any) {
         // if all valid values then calculate
-        //else give alert with pertinent info
+        let weightRange = 50...350
+        let ageRange = 10...90
+        var valid = true
+        
+        if(weightTextbox.hasText && ageTextbox.hasText){
+            if(weightRange.contains((Int)(weightTextbox.text!)!) && ageRange.contains((Int)(ageTextbox.text!)!)){
+            }else{
+                valid = false
+            }
+        }else{
+            valid = false
+        }
+        
+        if(valid){
+            NutritionAppViewController.weight = (Int)(weightTextbox.text!)!
+            NutritionAppViewController.age = (Int)(ageTextbox.text!)!
+            print("\(NutritionAppViewController.weight)\n\(NutritionAppViewController.age)")
+            
+            //code to open a new view and display recommendations
+            
+        }else{//else give alert with pertinent info
+            let inputAlert = UIAlertController(title: "Invalid Inputs", message: "Weight must be in range (50-350)\nAge must be in range (10-90)", preferredStyle: .alert)
+                   inputAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                   self.present(inputAlert, animated: true)
+        }
+       
+        
+    }
+    
+    // From https://www.codingexplorer.com/how-to-dismiss-uitextfields-keyboard-in-your-swift-app/
+    // dismisses keyboard when you touch outside of it
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+        super.touchesBegan(touches, with: event)
     }
     
     func setupGender(){
@@ -112,20 +148,22 @@ class NutritionAppViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1{
-            gender = genderPickerData[row]
-            print(gender)
+            NutritionAppViewController.gender = genderPickerData[row]
+            print(NutritionAppViewController.gender)
         }else if pickerView.tag == 2{
             // this next line from stackoverflow source on 3/23 todo list
-            height = (heightPickerData[0][pickerView.selectedRow(inComponent: 0)],heightPickerData[1][pickerView.selectedRow(inComponent: 1)])
-            print("\(Int(height.0)!) feet and \(Int(height.1)!) inches")
+            NutritionAppViewController.height = (heightPickerData[0][pickerView.selectedRow(inComponent: 0)],heightPickerData[1][pickerView.selectedRow(inComponent: 1)])
+            print("\(Int(NutritionAppViewController.height.0)!) feet and \(Int(NutritionAppViewController.height.1)!) inches")
             
         }else if pickerView.tag == 3{
-            active = activePickerData[row]
-            print(active)
+            NutritionAppViewController.active = activePickerData[row]
+            print(NutritionAppViewController.active)
         }else{
-            other = otherPickerData[row]
-            print(other)
+            NutritionAppViewController.other = otherPickerData[row]
+            print(NutritionAppViewController.other)
         }
+        
+        
         
         
     }
