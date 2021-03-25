@@ -21,19 +21,19 @@ class NutritionAppViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var ageTextbox: UITextField!
     
     var genderPickerData: [String] = [String]()
-    var heightPickerData: [[String]] = [[String]]()
+    var heightPickerData: [[Int]] = [[Int]]()
     var activePickerData: [String] = [String]()
     var otherPickerData: [String] = [String]()
     
     static var gender: String = "Female"
-    static var height: (String, String) = ("4", "0")
+    static var height: (Int, Int) = (4, 0)
     static var active: String = "Sedentary"
     static var other: String = "None"
     static var weight: Int = 150
     static var age: Int = 30
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         //connect data to picker
         setupGender()
         setupHeight()
@@ -58,9 +58,10 @@ class NutritionAppViewController: UIViewController, UIPickerViewDelegate, UIPick
         if(valid){
             NutritionAppViewController.weight = (Int)(weightTextbox.text!)!
             NutritionAppViewController.age = (Int)(ageTextbox.text!)!
-            print("\(NutritionAppViewController.weight)\n\(NutritionAppViewController.age)")
-            
-            //code to open a new view and display recommendations
+            //print("\(NutritionAppViewController.weight)\n\(NutritionAppViewController.age)")
+            // open to new page
+            let nutritionResultsVC = NutritionResultsViewController.instaniate()
+            navigationController?.pushViewController(nutritionResultsVC, animated: true)
             
         }else{//else give alert with pertinent info
             let inputAlert = UIAlertController(title: "Invalid Inputs", message: "Weight must be in range (50-350)\nAge must be in range (10-90)", preferredStyle: .alert)
@@ -89,7 +90,7 @@ class NutritionAppViewController: UIViewController, UIPickerViewDelegate, UIPick
         self.heightPicker.delegate = self
         self.heightPicker.dataSource = self
         
-        heightPickerData = [["4", "5", "6", "7"], ["0","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]]
+        heightPickerData = [[4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]]
     }
     
     func setupActive(){
@@ -149,18 +150,18 @@ class NutritionAppViewController: UIViewController, UIPickerViewDelegate, UIPick
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1{
             NutritionAppViewController.gender = genderPickerData[row]
-            print(NutritionAppViewController.gender)
+            //print(NutritionAppViewController.gender)
         }else if pickerView.tag == 2{
             // this next line from stackoverflow source on 3/23 todo list
             NutritionAppViewController.height = (heightPickerData[0][pickerView.selectedRow(inComponent: 0)],heightPickerData[1][pickerView.selectedRow(inComponent: 1)])
-            print("\(Int(NutritionAppViewController.height.0)!) feet and \(Int(NutritionAppViewController.height.1)!) inches")
+            //print("\((NutritionAppViewController.height.0)) feet and \((NutritionAppViewController.height.1)) inches")
             
         }else if pickerView.tag == 3{
             NutritionAppViewController.active = activePickerData[row]
-            print(NutritionAppViewController.active)
+            //print(NutritionAppViewController.active)
         }else{
             NutritionAppViewController.other = otherPickerData[row]
-            print(NutritionAppViewController.other)
+            //print(NutritionAppViewController.other)
         }
         
         

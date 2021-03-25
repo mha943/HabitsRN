@@ -25,7 +25,7 @@ class SetNotificationViewController: UIViewController {
         let components = Calendar.current.dateComponents([.hour, .minute], from: date)
         let hour = components.hour!
         let minute = components.minute!
-        print("\(hour)  \(minute)")
+        //print("\(hour)  \(minute)")
         
         HabitDetailViewController.habit2 = persistence.setNotificationDate(HabitDetailViewController.habitIndex2, hour: hour, min: minute)
         

@@ -15,25 +15,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading HabitsRN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzJ-MA-fXt">
-                                <rect key="frame" x="67" y="426.5" width="280" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-1024" translatesAutoresizingMaskIntoConstraints="NO" id="30F-0v-RMX">
-                                <rect key="frame" x="55" y="121" width="304" height="306"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eDd-Cb-ILW">
+                                <rect key="frame" x="40" y="64" width="334" height="732"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-1024" translatesAutoresizingMaskIntoConstraints="NO" id="30F-0v-RMX">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="732"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="30F-0v-RMX" secondAttribute="bottom" constant="435" id="B51-RU-BeO"/>
-                            <constraint firstItem="30F-0v-RMX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="Dra-bf-A0f"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="30F-0v-RMX" secondAttribute="trailing" constant="55" id="Hk6-UN-nqj"/>
-                            <constraint firstItem="qzJ-MA-fXt" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="PmN-uy-EZR"/>
-                            <constraint firstItem="30F-0v-RMX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="dFx-RS-T0s"/>
-                            <constraint firstItem="qzJ-MA-fXt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vgF-0x-vEo"/>
+                            <constraint firstItem="eDd-Cb-ILW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="0dG-zW-t8B"/>
+                            <constraint firstAttribute="trailing" secondItem="eDd-Cb-ILW" secondAttribute="trailing" constant="40" id="Lgr-Ck-rdG"/>
+                            <constraint firstAttribute="bottom" secondItem="eDd-Cb-ILW" secondAttribute="bottom" constant="100" id="RZr-gS-Ycu"/>
+                            <constraint firstItem="eDd-Cb-ILW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aFz-Ot-j6O"/>
                         </constraints>
                     </view>
                 </viewController>

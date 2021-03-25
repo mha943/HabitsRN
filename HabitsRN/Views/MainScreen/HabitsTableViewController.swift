@@ -43,9 +43,9 @@ class HabitsTableViewController: UITableViewController {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
             success, error in
             if error == nil && success{
-                print("permission granted")
+                //print("permission granted")
             }else{
-                print("no Permission :(")
+                //print("no Permission :(")
             }
         }
         
