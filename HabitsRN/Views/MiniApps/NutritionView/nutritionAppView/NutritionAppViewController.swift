@@ -64,7 +64,7 @@ class NutritionAppViewController: UIViewController, UIPickerViewDelegate, UIPick
             navigationController?.pushViewController(nutritionResultsVC, animated: true)
             
         }else{//else give alert with pertinent info
-            let inputAlert = UIAlertController(title: "Invalid Inputs", message: "Weight must be in range (50-350)\nAge must be in range (10-90)", preferredStyle: .alert)
+            let inputAlert = UIAlertController(title: "Outside of Range", message: "Weight must be in range (50-350)\nAge must be in range (10-90)", preferredStyle: .alert)
                    inputAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                    self.present(inputAlert, animated: true)
         }
