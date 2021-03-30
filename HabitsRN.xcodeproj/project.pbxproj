@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		056CE249F16AC34FC5803638 /* Pods_HabitsRN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 417FEF3ADE401260E6094271 /* Pods_HabitsRN.framework */; };
 		413B125E260D2B3100FCF0E8 /* NutritionResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413B125C260D2B3100FCF0E8 /* NutritionResultsViewController.swift */; };
 		413B125F260D2B3100FCF0E8 /* NutritionResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 413B125D260D2B3100FCF0E8 /* NutritionResultsViewController.xib */; };
 		414AF28025F45F70000BAF48 /* AddHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414AF27E25F45F70000BAF48 /* AddHabitViewController.swift */; };
@@ -59,6 +60,7 @@
 		414AF28925F7086F000BAF48 /* ConfirmHabitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmHabitViewController.xib; sourceTree = "<group>"; };
 		414AF28E25F7F279000BAF48 /* HabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewController.swift; sourceTree = "<group>"; };
 		414AF28F25F7F279000BAF48 /* HabitDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitDetailViewController.xib; sourceTree = "<group>"; };
+		417FEF3ADE401260E6094271 /* Pods_HabitsRN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HabitsRN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41857D0725F27C1200477F8F /* PersistenceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceLayer.swift; sourceTree = "<group>"; };
 		41A29D4A2603B5AB0026C4F6 /* SetNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNotificationViewController.swift; sourceTree = "<group>"; };
 		41A29D4B2603B5AB0026C4F6 /* SetNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetNotificationViewController.xib; sourceTree = "<group>"; };
@@ -90,6 +92,8 @@
 		41FF92A725E9C94F008B3AF7 /* HabitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsTableViewController.swift; sourceTree = "<group>"; };
 		41FF92A825E9C94F008B3AF7 /* HabitsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitsTableViewController.xib; sourceTree = "<group>"; };
 		41FF92AF25E9CA44008B3AF7 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		C525EBF0B01B734A96E3303F /* Pods-HabitsRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitsRN.release.xcconfig"; path = "Target Support Files/Pods-HabitsRN/Pods-HabitsRN.release.xcconfig"; sourceTree = "<group>"; };
+		C853F17037A0C4FFFE15C282 /* Pods-HabitsRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HabitsRN.debug.xcconfig"; path = "Target Support Files/Pods-HabitsRN/Pods-HabitsRN.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				056CE249F16AC34FC5803638 /* Pods_HabitsRN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				41FF928F25E9C18B008B3AF7 /* HabitsRN */,
+				D6B78B75AB26BE29901CBBB4 /* Pods */,
+				FF4514E57787A67F86CA83C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,6 +254,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D6B78B75AB26BE29901CBBB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C853F17037A0C4FFFE15C282 /* Pods-HabitsRN.debug.xcconfig */,
+				C525EBF0B01B734A96E3303F /* Pods-HabitsRN.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FF4514E57787A67F86CA83C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				417FEF3ADE401260E6094271 /* Pods_HabitsRN.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,9 +279,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41FF92A125E9C18D008B3AF7 /* Build configuration list for PBXNativeTarget "HabitsRN" */;
 			buildPhases = (
+				DE5AB882E9DA69858D09AAAE /* [CP] Check Pods Manifest.lock */,
 				41FF928925E9C18B008B3AF7 /* Sources */,
 				41FF928A25E9C18B008B3AF7 /* Frameworks */,
 				41FF928B25E9C18B008B3AF7 /* Resources */,
+				DB379A18FF1D6292F4511FE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,6 +352,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DB379A18FF1D6292F4511FE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HabitsRN/Pods-HabitsRN-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HabitsRN/Pods-HabitsRN-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HabitsRN/Pods-HabitsRN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE5AB882E9DA69858D09AAAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HabitsRN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		41FF928925E9C18B008B3AF7 /* Sources */ = {
@@ -488,6 +557,7 @@
 		};
 		41FF92A225E9C18D008B3AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C853F17037A0C4FFFE15C282 /* Pods-HabitsRN.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -507,6 +577,7 @@
 		};
 		41FF92A325E9C18D008B3AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C525EBF0B01B734A96E3303F /* Pods-HabitsRN.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

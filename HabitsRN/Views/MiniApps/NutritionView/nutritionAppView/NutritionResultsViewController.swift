@@ -4,10 +4,10 @@
 //
 //  Created by Matthew Hall on 3/25/21.
 //
-
+import Charts
 import UIKit
 
-class NutritionResultsViewController: UIViewController {
+class NutritionResultsViewController: UIViewController, ChartViewDelegate {
     
     var gender = ""
     var weight = 0.0
@@ -22,7 +22,11 @@ class NutritionResultsViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var proteinLabel: UILabel!
     @IBOutlet weak var carbsLabel: UILabel!
+
     @IBOutlet weak var fatsLabel: UILabel!
+    @IBOutlet weak var pieStack: UIStackView!
+    
+    var pieChart = PieChartView()
     
     
     override func viewDidLoad() {
@@ -30,7 +34,40 @@ class NutritionResultsViewController: UIViewController {
         setupVars()
         // Do any additional setup after loading the view.
         calcCalories()
+        pieChart.delegate = self
+        pieStack.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height/3)
     }
+    
+    //Pie Chart code https://www.youtube.com/watch?v=J9hl7HHXNHU
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        pieChart.frame = CGRect(x: 0, y: 0,
+                                width: self.pieStack.frame.size.height,
+                                height: self.pieStack.frame.size.height)
+        pieChart.center = pieStack.center
+        //view.addSubview(pieChart)
+        pieStack.addSubview(pieChart)
+        
+        let category = ["Protein", "Carbs", "Fats"]
+        let values = [5, 20, 17]
+        var entries = [ChartDataEntry]()
+        
+        for x in 0..<category.count{
+            let dataEntry = PieChartDataEntry(value: Double(values[x]), label: category[x])
+            entries.append(dataEntry)
+        }
+        
+        let set = PieChartDataSet(entries: entries, label: nil)
+        set.colors = ChartColorTemplates.pastel()
+        let data = PieChartData(dataSet: set)
+        pieChart.data = data
+        pieChart.legend.enabled = false
+        
+        
+        
+    }
+    
     
     func setupVars(){
         gender = NutritionAppViewController.gender
