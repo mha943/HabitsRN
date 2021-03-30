@@ -18,6 +18,10 @@ class NutritionResultsViewController: UIViewController, ChartViewDelegate {
     var other = ""
     
     var bmr: Double = 0.0
+    var calorieTotal: Double = 0.0
+    var carbTotal: Double = 0.0
+    var proteinTotal: Double = 0.0
+    var fatTotal: Double = 0.0
     
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var proteinLabel: UILabel!
@@ -34,37 +38,54 @@ class NutritionResultsViewController: UIViewController, ChartViewDelegate {
         setupVars()
         // Do any additional setup after loading the view.
         calcCalories()
-        pieChart.delegate = self
-        pieStack.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height/3)
+        setupPieStack()
     }
     
-    //Pie Chart code https://www.youtube.com/watch?v=J9hl7HHXNHU
+    func setupPieStack(){
+        pieChart.delegate = self
+        pieStack.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 275)
+    }
+    
+    //Pie Chart code adapted from https://www.youtube.com/watch?v=J9hl7HHXNHU
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
+        // set the size of chart to fit into view
         pieChart.frame = CGRect(x: 0, y: 0,
                                 width: self.pieStack.frame.size.height,
                                 height: self.pieStack.frame.size.height)
+        // center the chart and add to pieStack view
         pieChart.center = pieStack.center
-        //view.addSubview(pieChart)
         pieStack.addSubview(pieChart)
         
-        let category = ["Protein", "Carbs", "Fats"]
-        let values = [5, 20, 17]
+        // set up entry values for the pie chart
+        let category = ["Carbs","Fats","Proteins"]
+        
+        // values from harvard are c = 50% f = 30% p = 20%
+        let values = [(carbTotal/calorieTotal)*100, (fatTotal/calorieTotal)*100, (proteinTotal/calorieTotal)*100]
+        
         var entries = [ChartDataEntry]()
         
+        // add chart data into entries
         for x in 0..<category.count{
             let dataEntry = PieChartDataEntry(value: Double(values[x]), label: category[x])
             entries.append(dataEntry)
         }
         
+        // create a pieChartDataSet from entries
         let set = PieChartDataSet(entries: entries, label: nil)
+        
+        // set colors
         set.colors = ChartColorTemplates.pastel()
+        
+        // add the data to the pie chart
         let data = PieChartData(dataSet: set)
         pieChart.data = data
+        
+        //turn off legend and increase font size of pie chart
         pieChart.legend.enabled = false
-        
-        
+        pieChart.entryLabelFont = UIFont.systemFont(ofSize: 17)
+        pieChart.data?.setValueFont(UIFont.systemFont(ofSize: 20))
         
     }
     
@@ -125,8 +146,15 @@ class NutritionResultsViewController: UIViewController, ChartViewDelegate {
             calories += 0
         }
         
+        calorieTotal = calories
+        carbTotal = calories*0.5
+        fatTotal = calories*0.3
+        proteinTotal = calories*0.2
         totalLabel.text = "\((Int)(calories)) Calories"
-        
+        carbsLabel.text = "\((Int)(carbTotal)) Calories"
+        fatsLabel.text = "\((Int)(fatTotal)) Calories"
+        proteinLabel.text = "\((Int)(proteinTotal)) Calories"
+
     }
     
 }
