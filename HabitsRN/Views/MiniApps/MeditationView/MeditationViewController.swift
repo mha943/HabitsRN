@@ -11,7 +11,7 @@ class MeditationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Meditation"
+        title = "Meditation Habits"
         // Do any additional setup after loading the view.
     }
 

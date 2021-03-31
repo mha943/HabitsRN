@@ -11,7 +11,7 @@ class NutritionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Suggested Nutrition"
         // Do any additional setup after loading the view.
     }
     @IBAction func nutritionButtonPressed(_ sender: Any) {
