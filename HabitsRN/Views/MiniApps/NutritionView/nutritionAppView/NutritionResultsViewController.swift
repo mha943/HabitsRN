@@ -26,7 +26,7 @@ class NutritionResultsViewController: UIViewController, ChartViewDelegate {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var proteinLabel: UILabel!
     @IBOutlet weak var carbsLabel: UILabel!
-
+    
     @IBOutlet weak var fatsLabel: UILabel!
     @IBOutlet weak var pieStack: UIStackView!
     
@@ -39,6 +39,7 @@ class NutritionResultsViewController: UIViewController, ChartViewDelegate {
         // Do any additional setup after loading the view.
         calcCalories()
         setupPieStack()
+        PieSubview()
     }
     
     func setupPieStack(){
@@ -47,9 +48,7 @@ class NutritionResultsViewController: UIViewController, ChartViewDelegate {
     }
     
     //Pie Chart code adapted from https://www.youtube.com/watch?v=J9hl7HHXNHU
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
+    func PieSubview() {
         // set the size of chart to fit into view
         pieChart.frame = CGRect(x: 0, y: 0,
                                 width: self.pieStack.frame.size.height,
@@ -62,7 +61,11 @@ class NutritionResultsViewController: UIViewController, ChartViewDelegate {
         let category = ["Carbs","Fats","Proteins"]
         
         // values from harvard are c = 50% f = 30% p = 20%
-        let values = [(carbTotal/calorieTotal)*100, (fatTotal/calorieTotal)*100, (proteinTotal/calorieTotal)*100]
+        let carbGrams = carbTotal/4
+        let fatGrams = fatTotal/9
+        let proteinGrams = proteinTotal/4
+        
+        let values = [carbGrams, fatGrams, proteinGrams]
         
         var entries = [ChartDataEntry]()
         
@@ -86,6 +89,7 @@ class NutritionResultsViewController: UIViewController, ChartViewDelegate {
         pieChart.legend.enabled = false
         pieChart.entryLabelFont = UIFont.systemFont(ofSize: 17)
         pieChart.data?.setValueFont(UIFont.systemFont(ofSize: 20))
+        pieChart.drawHoleEnabled = false
         
     }
     
@@ -98,6 +102,7 @@ class NutritionResultsViewController: UIViewController, ChartViewDelegate {
         active = NutritionAppViewController.active
         other = NutritionAppViewController.other
     }
+    
     func convertToMetric(){
         weight /= 2.20462262185
         heightCM = ((12*(Double)(height.0))+(Double)(height.1))*2.54
@@ -154,7 +159,7 @@ class NutritionResultsViewController: UIViewController, ChartViewDelegate {
         carbsLabel.text = "\((Int)(carbTotal)) Calories"
         fatsLabel.text = "\((Int)(fatTotal)) Calories"
         proteinLabel.text = "\((Int)(proteinTotal)) Calories"
-
+        
     }
     
 }
