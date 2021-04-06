@@ -82,7 +82,7 @@ class HabitDetailViewController: UIViewController, ChartViewDelegate {
     }
     func setupPieView(){
         pieChart.delegate = self
-        pieView.frame = CGRect(x: 0, y: 0, width: self.pieView.frame.width, height: 150)
+        pieView.frame = CGRect(x: 0, y: 0, width: self.pieView.frame.size.width, height: 150)
     }
     
     //Pie Chart code adapted from https://www.youtube.com/watch?v=J9hl7HHXNHU
@@ -118,12 +118,16 @@ class HabitDetailViewController: UIViewController, ChartViewDelegate {
             
             pieChart.data = data
         }
-        
+       // pieChart.legend.enabled = false
         pieChart.entryLabelFont = UIFont.systemFont(ofSize: 15)
         pieChart.data?.setValueFont(UIFont.systemFont(ofSize: 17))
         pieChart.drawHoleEnabled = false
         pieChart.rotationEnabled = false
         pieChart.drawEntryLabelsEnabled = false
+        pieChart.legend.orientation = .vertical
+        pieChart.legend.yOffset = 50
+        pieChart.legend.xOffset = 25
+
         
     }
 }

@@ -30,7 +30,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m7S-NQ-O3F">
                     <rect key="frame" x="40" y="64" width="334" height="768"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="5no-cp-mLJ">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="5no-cp-mLJ">
                             <rect key="frame" x="0.0" y="0.0" width="334" height="293"/>
                             <constraints>
                                 <constraint firstAttribute="width" priority="999" constant="225" id="KKL-NL-tif"/>
@@ -57,7 +57,7 @@
                                 <constraint firstAttribute="height" constant="25" id="agZ-xL-c8M"/>
                             </constraints>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1U8-d5-Lnb" userLabel="PieView">
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="334" placeholderIntrinsicHeight="150" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1U8-d5-Lnb" userLabel="PieView">
                             <rect key="frame" x="0.0" y="338" width="334" height="150"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="150" id="dQl-ie-qJg"/>
@@ -158,7 +158,8 @@
                         </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="1U8-d5-Lnb" firstAttribute="centerX" secondItem="m7S-NQ-O3F" secondAttribute="centerX" id="7QU-lI-YOi"/>
+                        <constraint firstAttribute="trailing" secondItem="1U8-d5-Lnb" secondAttribute="trailing" id="DST-rk-h8c"/>
+                        <constraint firstItem="1U8-d5-Lnb" firstAttribute="leading" secondItem="m7S-NQ-O3F" secondAttribute="leading" id="xz4-7Q-TWl"/>
                     </constraints>
                 </stackView>
             </subviews>
