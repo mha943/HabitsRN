@@ -108,6 +108,7 @@ struct PersistenceLayer{
         self.loadHabits()
     }
     
+    // set the notification boolean of the habit and save it back into persistance.
     mutating func setNotificationHabit(_ habitIndex: Int) -> Habit{
         var updatedHabit = self.habits[habitIndex]
 
@@ -120,6 +121,7 @@ struct PersistenceLayer{
         return updatedHabit
     }
     
+    // sets a date for a notification and saves it in persistance.
     mutating func setNotificationDate(_ habitIndex: Int, hour: Int, min: Int) -> Habit{
         var updatedHabit = self.habits[habitIndex]
 
@@ -133,6 +135,7 @@ struct PersistenceLayer{
         return updatedHabit
     }
     
+    // deletest the notification when habit is deleted.
     mutating func unsetNotification(_ habitIndex: Int) -> Habit{
         let updatedHabit = self.habits[habitIndex]
         //delete the old notifiction

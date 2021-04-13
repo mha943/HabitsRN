@@ -40,6 +40,7 @@ class NutritionResultsViewController: UIViewController, ChartViewDelegate {
         calcCalories()
         setupPieStack()
         PieSubview()
+        setupNavBar()
     }
     
     func setupPieStack(){
@@ -92,7 +93,6 @@ class NutritionResultsViewController: UIViewController, ChartViewDelegate {
         pieChart.drawHoleEnabled = false
         
     }
-    
     
     func setupVars(){
         gender = NutritionAppViewController.gender
@@ -162,4 +162,16 @@ class NutritionResultsViewController: UIViewController, ChartViewDelegate {
         
     }
     
+}
+extension NutritionResultsViewController{
+    // sets the title and then adds a done button
+    func setupNavBar(){
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action:#selector(pressDone(_:)))
+        navigationItem.rightBarButtonItem = doneButton
+    }
+    
+    // done button returns to the main page
+    @objc func pressDone(_ sender: UIBarButtonItem){
+         navigationController?.popToRootViewController(animated: true)
+    }
 }

@@ -19,14 +19,22 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="szj-iA-pK7">
+                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="szj-iA-pK7">
                     <rect key="frame" x="20" y="59" width="374" height="773"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhD-NI-JVH">
+                            <rect key="frame" x="138.5" y="0.0" width="97" height="38"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4s-Ak-2ks">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="257.5"/>
-                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <rect key="frame" x="80.5" y="43" width="213" height="213"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="F4s-Ak-2ks" secondAttribute="height" multiplier="270:270" id="QsI-4P-Yke"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                            <state key="normal" title="Sleep">
+                            <state key="normal" image="sleep">
                                 <color key="titleColor" systemColor="systemBlueColor"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </state>
@@ -34,20 +42,40 @@
                                 <action selector="sleepButtonPressed:" destination="-1" eventType="touchUpInside" id="WKU-3m-e9D"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GU8-h8-V7B">
-                            <rect key="frame" x="0.0" y="257.5" width="374" height="258"/>
-                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meditation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPf-Nc-WFU">
+                            <rect key="frame" x="96" y="261" width="182.5" height="38"/>
                             <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                            <state key="normal" title="Meditation"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="GU8-h8-V7B">
+                            <rect key="frame" x="80.5" y="304" width="213" height="213"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="GU8-h8-V7B" secondAttribute="height" multiplier="270:270" id="LJ5-i1-dG2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                            <state key="normal" image="other">
+                                <color key="titleColor" systemColor="systemBlueColor"/>
+                            </state>
                             <connections>
                                 <action selector="meditationButtonPressed:" destination="-1" eventType="touchUpInside" id="Pyg-yM-YgF"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkO-Xq-BBL">
-                            <rect key="frame" x="0.0" y="515.5" width="374" height="257.5"/>
-                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kO-8s-GtW">
+                            <rect key="frame" x="113" y="522" width="148" height="38"/>
                             <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                            <state key="normal" title="Nutrition"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkO-Xq-BBL">
+                            <rect key="frame" x="83" y="565" width="208" height="208"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="lkO-Xq-BBL" secondAttribute="height" multiplier="270:270" id="ou9-xk-HEX"/>
+                            </constraints>
+                            <state key="normal" image="food">
+                                <color key="titleColor" systemColor="systemBlueColor"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </state>
                             <connections>
                                 <action selector="nutritionButtonPressed:" destination="-1" eventType="touchUpInside" id="Why-lD-6jf"/>
                             </connections>
@@ -67,17 +95,14 @@
         </view>
     </objects>
     <resources>
+        <image name="food" width="270" height="270"/>
+        <image name="other" width="270" height="270"/>
+        <image name="sleep" width="270" height="270"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

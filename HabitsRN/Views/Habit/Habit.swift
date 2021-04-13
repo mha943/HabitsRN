@@ -14,7 +14,7 @@ struct Habit : Codable{
         case book
         case bulb
         case clock
-        case code
+        case calendar
         case drop
         case food
         case grow
