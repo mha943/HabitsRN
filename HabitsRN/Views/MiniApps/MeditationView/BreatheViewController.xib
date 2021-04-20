@@ -24,6 +24,7 @@
                     <subviews>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="2.5" maxValue="3.75" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLN-vz-K6k">
                             <rect key="frame" x="-2" y="0.0" width="388" height="31"/>
+                            <color key="minimumTrackTintColor" red="0.30037447810000001" green="0.57511717080000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="sliderRelease:" destination="-1" eventType="valueChanged" id="1U8-XK-A0B"/>
                             </connections>

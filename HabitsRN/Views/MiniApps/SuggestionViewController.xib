@@ -54,7 +54,7 @@
                                 <constraint firstAttribute="width" secondItem="GU8-h8-V7B" secondAttribute="height" multiplier="270:270" id="LJ5-i1-dG2"/>
                             </constraints>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                            <state key="normal" image="other">
+                            <state key="normal" image="lotus">
                                 <color key="titleColor" systemColor="systemBlueColor"/>
                             </state>
                             <connections>
@@ -96,7 +96,7 @@
     </objects>
     <resources>
         <image name="food" width="270" height="270"/>
-        <image name="other" width="270" height="270"/>
+        <image name="lotus" width="270" height="270"/>
         <image name="sleep" width="270" height="270"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
